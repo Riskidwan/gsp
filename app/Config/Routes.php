@@ -15,6 +15,14 @@ $routes->get('/gardening', 'Website::gardening');
 $routes->get('/receptionist', 'Website::receptionist');
 $routes->get('/driver', 'Website::driver');
 $routes->get('/labor_supply', 'Website::labor_supply');
+
+//LPK
+$routes->get('/rubber_seal', 'Website::rubber_seal');
+$routes->get('/wiring_harness', 'Website::wiring_harness');
+$routes->get('/sewing', 'Website::sewing');
+$routes->get('/packing', 'Website::packing');
+$routes->get('/molding_operator', 'Website::molding_operator');
+
 $routes->get('/loker', 'Website::loker');
 $routes->get('/berita', 'Website::berita');
 $routes->get('/contact', 'Website::contact');
