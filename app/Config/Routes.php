@@ -21,7 +21,7 @@ $routes->get('/contact', 'Website::contact');
 $routes->get('/berita_detail_award', 'Website::berita_detail_award');
 // $routes->get('/input_loker', 'Website::inputloker');
 // $routes->get('inputloker', 'Website::input');
-$routes->get('inputloker', 'Website::input');
+$routes->get('inputloker', 'Website\Lamaran::input');
 
 //halaman admin
 $routes->get('/dashboard', 'dashboard');
@@ -31,8 +31,21 @@ $routes->get('/logout', 'Auth::logout');
 $routes->get('/cekdb', 'CekDatabase::index');
 
 $routes->get('/input_loker', 'LokerC::input_loker');
-$routes->get('/data_loker', 'LokerC::data_loker');
+// $routes->get('/data_loker', 'LokerC::data_loker');
+
 
 
 $routes->get('/input_berita', 'BeritaC::input_berita');
 $routes->get('/data_berita', 'BeritaC::data_berita');
+
+$routes->get('/lamaran', 'website\Lamaran::index');
+$routes->post('/lamaran/save', 'website\Lamaran::save');
+
+$routes->get('/data_loker', 'Dashboard::lamaran');
+$routes->get('/dashboard/hapus/(:num)', 'Dashboard::hapus/$1');
+$routes->get('/dashboard/tandai/(:num)', 'Dashboard::tandai/$1');
+
+$routes->get('/data_loker', 'Dashboard::lamaran');
+$routes->get('/data_loker/(:segment)', 'Dashboard::lamaran/$1');
+
+

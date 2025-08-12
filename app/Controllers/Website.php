@@ -8,27 +8,27 @@ class Website extends BaseController
     {
         return view('website/index');
     }
-     public function about()
+    public function about()
     {
         return view('website/about');
     }
-     public function services()
+    public function services()
     {
         return view('website/services');
     }
-     public function services_security()
+    public function services_security()
     {
         return view('website/services_security');
     }
-     public function cleaning_service()
+    public function cleaning_service()
     {
         return view('website/cleaning_service');
     }
-     public function gardening()
+    public function gardening()
     {
         return view('website/gardening');
     }
-     public function receptionist()
+    public function receptionist()
     {
         return view('website/receptionist');
     }
@@ -56,9 +56,9 @@ class Website extends BaseController
     {
         return view('website/berita_detail_award');
     }
-      public function input()
-    {
-        // Jika mau kirim data, bisa pakai array: return view('website/inputloker', $data);
-        return view('website/inputloker');
-    }
+    // public function input()
+    // {
+    //     $data['position'] = $this->request->getGet('position');
+    //     return view('website/inputloker', $data);
+    // }
 }

@@ -115,6 +115,9 @@
                             <li class="submenu-item  ">
                                 <a href="data_loker" class="submenu-link">data Loker</a>
                             </li>
+                              <li class="submenu-item  ">
+                                <a href="data_loker" class="submenu-link">data komentar</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>

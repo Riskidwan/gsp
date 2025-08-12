@@ -224,58 +224,74 @@
 <body>
     <?php include 'header.php'; ?>
     <!-- Loker Section -->
-     <br>
+    <br>
     <section id="loker" class="section">
         <div class="container">
             <h2 class="section-title">Lowongan Kerja Terbaru</h2>
             <div class="card-grid">
                 <!-- Security Officer -->
-                <div class="card">
-                    <div class="urgent-badge">Urgent</div>
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=180&fit=crop" alt="Security">
-                    <div class="card-content">
-                        <h3>Security Officer - Jakarta</h3>
-                        <div class="salary-range">Rp 4.500.000 - Rp 5.500.000</div>
-                        <p class="job-description">Bertugas menjaga keamanan area gedung dan memantau situasi 24 jam. Memastikan ketertiban dan keselamatan seluruh area kerja.</p>
+                   <div class="card">
+        <div class="urgent-badge">Urgent</div>
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=200&fit=crop" alt="Factory Production">
+        <div class="card-content">
+            <h3>Operator Produksi - PT INKOM</h3>
+            <div class="salary-range">Gaji Kompetitif + Tunjangan</div>
+            <p class="job-description">Bertugas mengoperasikan mesin produksi dan memastikan proses produksi berjalan dengan lancar. Bertanggung jawab dalam menjaga kualitas produk sesuai standar perusahaan.</p>
 
-                        <div class="job-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Lokasi</span>
-                                <span class="detail-value">Jakarta Pusat</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Tipe Kerja</span>
-                                <span class="detail-value">Full Time</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Jam Kerja</span>
-                                <span class="detail-value">Shift (24 jam)</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Pengalaman</span>
-                                <span class="detail-value">Min. 1 tahun</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Pendidikan</span>
-                                <span class="detail-value">SMA/SMK</span>
-                            </div>
-                        </div>
-
-                        <div class="requirements">
-                            <h4>Persyaratan:</h4>
-                            <ul>
-                                <li>Pria, usia 25-40 tahun</li>
-                                <li>Tinggi badan minimal 165 cm</li>
-                                <li>Memiliki sertifikat Garda/Security</li>
-                                <li>Sehat jasmani dan rohani</li>
-                                <li>Mampu bekerja dalam tim</li>
-                                <li>Jujur dan bertanggung jawab</li>
-                            </ul>
-                        </div>
-
-                        <button class="apply-btn">Lamar Sekarang</button>
-                    </div>
+             <div class="job-details">
+                <div class="detail-item">
+                    <span class="detail-label">Lokasi</span>
+                    <span class="detail-value">PT Industri Komkar Indonesia</span>
                 </div>
+                <div class="detail-item">
+                    <span class="detail-label">Tipe Kerja</span>
+                    <span class="detail-value">Full Time</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Jam Kerja</span>
+                    <span class="detail-value">Shift</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Pengalaman</span>
+                    <span class="detail-value">Fresh Graduate Welcome</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Pendidikan</span>
+                    <span class="detail-value">SMA/SMK/MA Sederajat</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Gender</span>
+                    <span class="detail-value">Laki-laki / Perempuan</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Kesehatan Mata</span>
+                    <span class="detail-value">Tidak buta warna & tidak minus</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Tinggi Badan</span>
+                    <span class="detail-value">L: 150cm, P: 145cm</span>
+                </div>
+            </div>
+
+            <div class="requirements">
+                <h4>Persyaratan Umum:</h4>
+                <ul>
+                   <li>Surat lamaran pekerjaan</li>
+                    <li>CV/Daftar riwayat hidup</li>
+                    <li>Pas foto 4x6 (2 lembar)</li>
+                    <li>Fotocopy KTP & Kartu Keluarga</li>
+                    <li>Fotocopy SKCK</li>
+                    <li>Fotocopy Ijazah/SKL</li>
+                    <li>Surat keterangan sehat dari IHC Klinik GSP</li>
+                    <li>Sertifikat pendukung lainnya</li>
+                </ul>
+            </div>
+
+            
+
+            <a href="/inputloker" class="apply-btn">Lamar Sekarang</a>
+        </div>
+    </div>
 
                 <!-- Cleaning Service -->
                 <div class="card">
@@ -320,7 +336,7 @@
                             </ul>
                         </div>
 
-                        <button class="apply-btn">Lamar Sekarang</button>
+                        <a href="/inputloker" class="apply-btn">Lamar Sekarang</a>
                     </div>
                 </div>
 
@@ -366,47 +382,14 @@
                                 <li>Komunikatif dan ramah</li>
                             </ul>
                         </div>
-
-                        <button class="apply-btn">Lamar Sekarang</button>
+                        <a href="/inputloker" class="apply-btn">Lamar Sekarang</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <?php include 'Footer.php'; ?>
-    <script>
-        // Redirect tombol "Lamar Sekarang" ke halaman formulir lamaran
-        document.querySelectorAll('.apply-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                // Ambil nama posisi dari card
-                const jobTitle = this.closest('.card').getAttribute('data-position');
-                
-                // Encode nama posisi untuk URL parameter
-                const encodedJobTitle = encodeURIComponent(jobTitle);
-                
-                // URL ke halaman formulir lamaran dengan parameter posisi
-                const formURL = `inputloker.php?position=${encodedJobTitle}`;
-                
-                // Redirect ke halaman formulir
-                window.location.href = formURL;
-            });
-        });
-    </script>
-    <!-- <script>
-        // Arahkan tombol "Lamar Sekarang" ke Google Form
-        document.querySelectorAll('.apply-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                // Jika ingin menyertakan nama posisi di form, kamu bisa kirim via query string (optional)
-                const jobTitle = this.closest('.card').querySelector('h3').textContent;
 
-                // Ganti URL Google Form kamu di sini
-                const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSfheM8W_mQu5IAEX3-byMMFzXTBUNi5GN-K5njUCii5U_-kAg/viewform?usp=header";
-
-                // Redirect ke form (tanpa kirim data tambahan)
-                window.open(formURL, "_blank");
-            });
-        });
-    </script> -->
     <script src="Website/js/scripts.js"></script>
 </body>
 
