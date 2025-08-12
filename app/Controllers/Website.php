@@ -40,6 +40,31 @@ class Website extends BaseController
     {
         return view('website/labor_supply');
     }
+    public function rubber_seal()
+{
+    return view('website/LPK/Rubber_Seal');
+}
+
+public function wiring_harness()
+{
+    return view('website/LPK/Wiring_Harness');
+}
+
+public function sewing()
+{
+    return view('website/LPK/Sewing');
+}
+
+public function packing()
+{
+    return view('website/LPK/Packing');
+}
+
+public function molding_operator()
+{
+    return view('website/LPK/Molding_Operator');
+}
+
     public function loker()
     {
         return view('website/loker');
