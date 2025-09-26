@@ -13,7 +13,7 @@
   <br>
 
   <!-- SLIDE 1: Hero Section -->
-  <section class="hero" style="background: #1976d2; color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
+  <section class="hero" style="background: linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:32px; padding:56px 24px;">
       <div style="flex:1 1 420px; min-width:280px; z-index:2;">
         <h1 style="font-size:2.8rem; margin-bottom:0.7rem;">Molding Operator</h1>
@@ -35,7 +35,7 @@
       <div style="flex:1 1 340px; min-width:260px;">
         <h2 style="color:#1565c0;">Tentang Pelatihan Molding Operator</h2>
         <p style="font-size:1.08rem; color:#444;">
-          Pelatihan ini mengajarkan pengoperasian mesin injection molding untuk memproduksi komponen plastik/karet. Peserta mempelajari pemasangan mold, pengaturan parameter mesin, dan pemeriksaan kualitas hasil cetakan.
+          Pelatihan ini mengajarkan pengoperasian mesin injection molding untuk memproduksi komponen karet. Peserta mempelajari pemasangan mold, pengaturan parameter mesin, dan pemeriksaan kualitas hasil cetakan.
         </p>
         <ul style="font-size:1rem; color:#444; margin-top:1rem; padding-left:18px;">
           <li>Pengoperasian mesin injection molding</li>
@@ -100,7 +100,7 @@
           <img src="https://images.unsplash.com/photo-1616348436168-0b47c2ed1e20?w=400&h=180&fit=crop"
                alt="Proses Produksi" class="service-image">
           <h3>Proses Produksi</h3>
-          <p>Pengoperasian mesin untuk memproduksi komponen plastik/karet sesuai desain.</p>
+          <p>Pengoperasian mesin untuk memproduksi komponen karet sesuai desain.</p>
         </div>
 
         <div class="service-card">
@@ -288,7 +288,7 @@
 </section>
 
 <!-- CTA Section -->
-  <section class="section" style="background:#1976d2; color:#fff; text-align:center; padding:80px 0;">
+  <section class="section" style="background:linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color:#fff; text-align:center; padding:80px 0;">
     <div class="container">
       <h2 style="font-size:2.5rem; margin-bottom:1rem; color:#fff;">Butuh Info Pemagangan?</h2>
       <p style="font-size:1.2rem; margin-bottom:2rem; color:#bbdefb;">Hubungi kami sekarang!</p>

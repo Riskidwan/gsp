@@ -13,7 +13,7 @@
 <br>
 
     <!-- SLIDE 1: Hero Section -->
-  <section class="hero" style="background: #1976d2; color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
+  <section class="hero" style="background: linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:32px; padding:56px 24px;">
       <div style="flex:1 1 420px; min-width:280px; z-index:2;">
         <h1 style="font-size:2.8rem; margin-bottom:0.7rem;">Rubber Seal</h1>
@@ -24,7 +24,7 @@
         <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
       </div>
       <div style="flex:1 1 420px; min-width:280px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=500&fit=crop" alt="Cleaning Service" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
+        <img src="Website/images/rubber seal.jpg" alt="Cleaning Service" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
       </div>
     </div>
   </section>
@@ -49,7 +49,7 @@
     </div>
     <!-- Kolom Kanan: Gambar -->
     <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-      <img src="https://images.unsplash.com/photo-1621707146454-c6b7151e0914?w=600&h=300&fit=crop" 
+      <img src="Website/images/mesin ruber.webp"
            alt="Mesin Karet" 
            style="width:100%; max-width:340px; border-radius:14px;">
     </div>
@@ -61,7 +61,7 @@
   <section class="section">
     <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=400&h=180&fit=crop" alt="Keunggulan GSP" style="width:100%; max-width:340px; border-radius:14px;">
+        <img src="Website/images/karet.jpg" alt="Keunggulan GSP" style="width:100%; max-width:340px; border-radius:14px;">
       </div>
       <div style="flex:1 1 340px; min-width:260px;">
         <h2 style="color:#1565c0;">Mengapa Memilih GSP?</h2>
@@ -86,37 +86,37 @@
       <div class="services-grid">
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1617127469288-bd6f0a68a3a5?w=400&h=180&fit=crop" alt="Mesin Press Karet" class="service-image">
+          <img src="Website/images/mesin pres.jpeg" alt="Mesin Press Karet" class="service-image">
           <h3>Pengoperasian Mesin Press</h3>
           <p>Peserta mempelajari pengoperasian mesin press karet untuk membentuk seal sesuai desain.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1621707146454-c6b7151e0914?w=400&h=180&fit=crop" alt="Pencetakan Rubber Seal" class="service-image">
+          <img src="Website/images/pencetakan ruber.webp" alt="Pencetakan Rubber Seal" class="service-image">
           <h3>Pencetakan Rubber Seal</h3>
           <p>Proses pencetakan karet menjadi bentuk seal dengan cetakan standar industri.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1581091012184-5c8b0a27d85b?w=400&h=180&fit=crop" alt="Quality Control" class="service-image">
+          <img src="Website/images/kontrol ruber.jpg" alt="Quality Control" class="service-image">
           <h3>Kontrol Kualitas</h3>
           <p>Pemeriksaan ukuran, bentuk, dan kelenturan seal sesuai spesifikasi.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=180&fit=crop" alt="Proses Vulkanisasi" class="service-image">
+          <img src="Website/images/vulkanisasi ruber.jpeg" alt="Proses Vulkanisasi" class="service-image">
           <h3>Proses Vulkanisasi</h3>
           <p>Pemanasan karet untuk meningkatkan kekuatan dan daya tahan produk.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1581090700029-2c4f1f4fc3f2?w=400&h=180&fit=crop" alt="Pengemasan" class="service-image">
+          <img src="Website/images/pengemasan ruber.jpg" alt="Pengemasan" class="service-image">
           <h3>Pengemasan Produk</h3>
           <p>Pengemasan rubber seal sesuai standar keamanan dan pengiriman.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1581091215369-9f34d8c3b2a5?w=400&h=180&fit=crop" alt="Kerja Tim" class="service-image">
+          <img src="Website/images/kerja tim ruber.webp" alt="Kerja Tim" class="service-image">
           <h3>Kerja Tim Produksi</h3>
           <p>Kolaborasi peserta untuk menyelesaikan target produksi secara efisien.</p>
         </div>
@@ -254,7 +254,7 @@
       <!-- Testimoni 2 -->
       <div style="background:#ffffff; border-radius:20px; padding:40px; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
         <div style="display:flex; align-items:center; margin-bottom:1.5rem;">
-          <img src="https://images.unsplash.com/photo-1581092334574-6c4f4f65a722?w=80&h=80&fit=crop&crop=face" style="width:60px; height:60px; border-radius:50%; margin-right:15px;">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&h=80&fit=crop&crop=face" style="width:60px; height:60px; border-radius:50%; margin-right:15px;">
           <div>
             <h4 style="color:#1565c0; margin:0;">Putri Amelia</h4>
             <p style="color:#666; margin:0; font-size:0.9rem;">Magang di PT ABC Seal Manufacturing</p>
@@ -287,7 +287,7 @@
 
 
   <!-- CTA Section -->
-  <section class="section" style="background:#1976d2; color:#fff; text-align:center; padding:80px 0;">
+  <section class="section" style="background:linear-gradient(135deg, #02a85a 0%, #02a85a 100%); text-align:center; padding:80px 0;">
     <div class="container">
       <h2 style="font-size:2.5rem; margin-bottom:1rem; color:#fff;">Butuh Info Pemagangan?</h2>
       <p style="font-size:1.2rem; margin-bottom:2rem; color:#bbdefb;">Hubungi kami sekarang!</p>

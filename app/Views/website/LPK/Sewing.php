@@ -13,7 +13,7 @@
   <br>
 
   <!-- SLIDE 1: Hero Section -->
-  <section class="hero" style="background: #1976d2; color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
+  <section class="hero" style="background: linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:32px; padding:56px 24px;">
       <div style="flex:1 1 420px; min-width:280px; z-index:2;">
         <h1 style="font-size:2.8rem; margin-bottom:0.7rem;">Sewing</h1>
@@ -24,7 +24,7 @@
         <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
       </div>
       <div style="flex:1 1 420px; min-width:280px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=500&fit=crop" alt="Cleaning Service" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
+        <img src="Website/images/mpg.webp" alt="Cleaning Service" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
       </div>
     </div>
   </section>
@@ -44,7 +44,7 @@
         </ul>
       </div>
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1593032465171-d88a70629abe?w=600&h=300&fit=crop" 
+        <img src="Website/images/sewing.webp" 
              alt="Pelatihan Menjahit" 
              style="width:100%; max-width:340px; border-radius:14px;">
       </div>
@@ -55,7 +55,7 @@
   <section class="section">
     <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=180&fit=crop" 
+        <img src="Website/images/sewing 1.jpg" 
              alt="Keunggulan GSP" 
              style="width:100%; max-width:340px; border-radius:14px;">
       </div>
@@ -82,42 +82,42 @@
       <div class="services-grid">
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1600180758895-99b8b8a2d6b5?w=400&h=180&fit=crop"
+          <img src="Website/images/potong kain.webp" 
                alt="Pemotongan Kain" class="service-image">
           <h3>Pemotongan Kain</h3>
           <p>Peserta mempelajari teknik memotong kain sesuai pola yang diberikan.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1621451537084-56f4172c2fcf?w=400&h=180&fit=crop"
+          <img src="Website/images/menjahit.jpg"
                alt="Menjahit Produk" class="service-image">
           <h3>Menjahit Produk</h3>
           <p>Praktik menjahit berbagai model pakaian dengan mesin jahit industri.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1602751584552-4d9f4dbd2c2d?w=400&h=180&fit=crop"
+          <img src="Website/images/finishing.jpeg"
                alt="Finishing" class="service-image">
           <h3>Finishing</h3>
           <p>Penyelesaian akhir pada produk jahit agar siap dipasarkan.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=180&fit=crop"
+          <img src="Website/images/kualitas sewing.webp"
                alt="Kontrol Kualitas" class="service-image">
           <h3>Kontrol Kualitas</h3>
           <p>Pemeriksaan detail jahitan dan kualitas produk sebelum distribusi.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1624225325421-4ad7432e5990?w=400&h=180&fit=crop"
+          <img src="Website/images/tim sewing.jpg"
                alt="Proyek Tim" class="service-image">
           <h3>Proyek Tim</h3>
           <p>Kolaborasi dalam membuat produk garmen dalam jumlah besar.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1603063081416-cd04870af53b?w=400&h=180&fit=crop"
+          <img src="Website/images/presentasi produk.jpg"
                alt="Presentasi Produk" class="service-image">
           <h3>Presentasi Produk</h3>
           <p>Peserta mempresentasikan hasil produk yang dibuat selama pelatihan.</p>
@@ -236,7 +236,7 @@
 </section>
 
 <!-- CTA Section -->
-  <section class="section" style="background:#1976d2; color:#fff; text-align:center; padding:80px 0;">
+  <section class="section" style="background:linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color:#fff; text-align:center; padding:80px 0;">
     <div class="container">
       <h2 style="font-size:2.5rem; margin-bottom:1rem; color:#fff;">Butuh Info Pemagangan?</h2>
       <p style="font-size:1.2rem; margin-bottom:2rem; color:#bbdefb;">Hubungi kami sekarang!</p>

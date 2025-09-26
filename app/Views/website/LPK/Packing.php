@@ -13,7 +13,7 @@
   <br>
 
   <!-- SLIDE 1: Hero Section -->
-  <section class="hero" style="background: #1976d2; color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
+  <section class="hero" style="background: linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:32px; padding:56px 24px;">
       <div style="flex:1 1 420px; min-width:280px; z-index:2;">
         <h1 style="font-size:2.8rem; margin-bottom:0.7rem;">Packing</h1>
@@ -24,7 +24,7 @@
         <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
       </div>
       <div style="flex:1 1 420px; min-width:280px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=500&fit=crop" alt="Cleaning Service" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
+        <img src="Website/images/packing 1.jpg" alt="Cleaning Service" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
       </div>
     </div>
   </section>
@@ -46,7 +46,7 @@
         </ul>
       </div>
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1581093588401-4b2a61ecfe5f?w=600&h=300&fit=crop" 
+        <img src="Website/images/packing 2.avif" 
              alt="Pelatihan Packing" 
              style="width:100%; max-width:340px; border-radius:14px;">
       </div>
@@ -57,7 +57,7 @@
   <section class="section">
     <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=180&fit=crop" 
+        <img src="Website/images/packing 3.webp" 
              alt="Keunggulan GSP" 
              style="width:100%; max-width:340px; border-radius:14px;">
       </div>
@@ -84,42 +84,42 @@
       <div class="services-grid">
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f?w=400&h=180&fit=crop"
+          <img src="Website/images/persiapan packing.jpg"
                alt="Persiapan Produk" class="service-image">
           <h3>Persiapan Produk</h3>
           <p>Peserta mempelajari cara memeriksa dan mempersiapkan produk sebelum pengemasan.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1581091870592-1e7a0e6a7e0b?w=400&h=180&fit=crop"
+          <img src="Website/images/packing mesin.webp"
                alt="Pengemasan Manual" class="service-image">
           <h3>Pengemasan Manual</h3>
           <p>Teknik membungkus dan mengemas produk secara manual dengan rapi dan aman.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1581091012184-5c8b0a27d85b?w=400&h=180&fit=crop"
+          <img src="Website/images/packing manual.webp"
                alt="Pengemasan Mesin" class="service-image">
           <h3>Pengemasan Menggunakan Mesin</h3>
           <p>Pelatihan penggunaan mesin packing otomatis untuk efisiensi produksi.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1558774782-84f68707a1e7?w=400&h=180&fit=crop"
+          <img src="Website/images/label.jpg"
                alt="Labeling Produk" class="service-image">
           <h3>Labeling Produk</h3>
           <p>Pemasangan label dan kode identifikasi sesuai permintaan pelanggan.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=400&h=180&fit=crop"
+          <img src="Website/images/pemeriksaan sewing.jpeg"
                alt="Pemeriksaan Kualitas" class="service-image">
           <h3>Pemeriksaan Kualitas</h3>
           <p>Kontrol kualitas kemasan untuk memastikan keamanan dan tampilan produk.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1581091215369-9f34d8c3b2a5?w=400&h=180&fit=crop"
+          <img src="Website/images/pengiriman packing.webp"
                alt="Pengiriman" class="service-image">
           <h3>Pengiriman Produk</h3>
           <p>Simulasi proses pengiriman barang ke pelanggan sesuai prosedur logistik.</p>
@@ -292,7 +292,7 @@
 
 
     <!-- CTA Section -->
-  <section class="section" style="background:#1976d2; color:#fff; text-align:center; padding:80px 0;">
+  <section class="section" style="background:linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color:#fff; text-align:center; padding:80px 0;">
     <div class="container">
       <h2 style="font-size:2.5rem; margin-bottom:1rem; color:#fff;">Butuh Info Pemagangan?</h2>
       <p style="font-size:1.2rem; margin-bottom:2rem; color:#bbdefb;">Hubungi kami sekarang!</p>

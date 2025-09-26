@@ -12,7 +12,7 @@
   <?php echo $this->include('website/header'); ?>
 <br>
   <!-- SLIDE 1: Hero Section -->
-  <section class="hero" style="background: #1976d2; color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
+  <section class="hero" style="background: linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:32px; padding:56px 24px;">
       <div style="flex:1 1 420px; min-width:280px; z-index:2;">
         <h1 style="font-size:2.8rem; margin-bottom:0.7rem;">Wiring Harness</h1>
@@ -23,7 +23,7 @@
         <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
       </div>
       <div style="flex:1 1 420px; min-width:280px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=500&fit=crop" alt="Cleaning Service" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
+        <img src="Website/images/wiring 1.png" alt="Cleaning Service" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
       </div>
     </div>
   </section>
@@ -44,7 +44,7 @@
         </ul>
       </div>
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=180&fit=crop" alt="Cleaning Overview" style="width:100%; max-width:340px; border-radius:14px;">
+        <img src="Website/images/wiring 2.png" alt="Cleaning Overview" style="width:100%; max-width:340px; border-radius:14px;">
       </div>
     </div>
   </section>
@@ -53,7 +53,7 @@
   <section class="section">
     <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=400&h=180&fit=crop" alt="Keunggulan Cleaning" style="width:100%; max-width:340px; border-radius:14px;">
+        <img src="Website/images/wiring kabel.webp" alt="Keunggulan Cleaning" style="width:100%; max-width:340px; border-radius:14px;">
       </div>
       <div style="flex:1 1 340px; min-width:260px;">
         <h2 style="color:#1565c0;">Mengapa Memilih GSP?</h2>
@@ -77,42 +77,42 @@
     <div class="services-grid">
 
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f?w=400&h=180&fit=crop"
+        <img src="Website/images/rakit kabel.jpg"
           alt="Praktek Merakit Kabel" class="service-image">
         <h3>Praktek Merakit Kabel</h3>
         <p>Peserta belajar teknik merakit kabel sesuai diagram wiring dan standar industri otomotif.</p>
       </div>
 
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1581090700227-4c4f50f1e3b0?w=400&h=180&fit=crop"
+        <img src="Website/images/crimping kabel.jpeg"
           alt="Penggunaan Alat Crimping" class="service-image">
         <h3>Penggunaan Alat Crimping</h3>
         <p>Latihan menggunakan crimping tool untuk menghasilkan koneksi kabel yang kuat dan presisi.</p>
       </div>
 
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1581091012184-5c8b0a27d85b?w=400&h=180&fit=crop"
+        <img src="Website/images/kontrol wiring.jpeg"
           alt="Quality Control" class="service-image">
         <h3>Quality Control</h3>
         <p>Pemeriksaan hasil rakitan kabel sesuai standar mutu dan prosedur keselamatan kerja.</p>
       </div>
 
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=400&h=180&fit=crop"
+        <img src="Website/images/pembuatan wiring.jpeg"
           alt="Pembuatan Wiring Harness Lengkap" class="service-image">
         <h3>Pembuatan Wiring Harness Lengkap</h3>
         <p>Perakitan komponen wiring harness untuk aplikasi otomotif, elektronik, dan mesin industri.</p>
       </div>
 
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1581090700029-2c4f1f4fc3f2?w=400&h=180&fit=crop"
+        <img src="Website/images/tes wiring.jpeg"
           alt="Instalasi & Pengetesan" class="service-image">
         <h3>Instalasi & Pengetesan</h3>
         <p>Simulasi pemasangan wiring harness pada unit kendaraan dan pengujian fungsi kelistrikan.</p>
       </div>
 
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1581091215369-9f34d8c3b2a5?w=400&h=180&fit=crop"
+        <img src="Website/images/kerja tim wiring.jpg"
           alt="Kerja Tim" class="service-image">
         <h3>Kerja Tim & Proyek Kolaborasi</h3>
         <p>Peserta bekerja dalam tim untuk menyelesaikan proyek wiring harness secara efisien dan tepat waktu.</p>
@@ -284,7 +284,7 @@
 
 
   <!-- CTA Section -->
-  <section class="section" style="background:#1976d2; color:#fff; text-align:center; padding:80px 0;">
+  <section class="section" style="background:linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color:#fff; text-align:center; padding:80px 0;">
     <div class="container">
       <h2 style="font-size:2.5rem; margin-bottom:1rem; color:#fff;">Butuh Info Pemagangan?</h2>
       <p style="font-size:1.2rem; margin-bottom:2rem; color:#bbdefb;">Hubungi kami sekarang!</p>
