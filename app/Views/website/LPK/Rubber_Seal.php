@@ -1,21 +1,27 @@
-<link rel="stylesheet" href="Website/css/services.css" />
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rubber Seal - PT Gemilang Sapta Perdana</title>
+  <link rel="stylesheet" href="Website/css/services.css" />
+</head>
 
 <body>
-  <?= $this->extend('website\website') ?>
-
+  <?php echo $this->include('website/header'); ?>
+<br>
 
     <!-- SLIDE 1: Hero Section -->
   <section class="hero" style="background: linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
-
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:32px; padding:56px 24px;">
       <div style="flex:1 1 420px; min-width:280px; z-index:2;">
         <h1 style="font-size:2.8rem; margin-bottom:0.7rem;">Rubber Seal</h1>
         <p style="font-size:1.35rem; color:#bbdefb; margin-bottom:1.2rem;">Pelatihan Unit Kompetensi Karet Industri</p>
         <p style="font-size:1.13rem; color:#e3f2fd; margin-bottom:1.5rem; max-width:500px;">
-          Pelatihan ini membekali peserta dengan keahlian mengoperasikan mesin, mengontrol proses produksi, dan memastikan kualitas produk karet (seal) sesuai standar industri.
+           Pelatihan ini membekali peserta dengan keahlian mengoperasikan mesin, mengontrol proses produksi, dan memastikan kualitas produk karet (seal) sesuai standar industri.
         </p>
-        <a href="https://wa.me/6282328085554" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
+        <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
       </div>
       <div style="flex:1 1 420px; min-width:280px; text-align:center;">
         <img src="Website/images/rubber seal.jpg" alt="Cleaning Service" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
@@ -25,30 +31,22 @@
 
 
   <!-- TENTANG PELATIHAN -->
-  <section class="section" style="background:#f3f8ff;">
-    <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
-      <!-- Kolom Kiri: Teks -->
-      <div style="flex:1 1 340px; min-width:260px;">
-        <h2 style="color:#1565c0;">Tentang Pelatihan Rubber Seal</h2>
-        <p style="font-size:1.08rem; color:#444;">
-          Fokus pelatihan adalah pengolahan produk karet industri untuk otomotif dan manufaktur.
-          Peserta akan memahami proses produksi dari awal hingga akhir melalui praktik langsung.
-        </p>
-        <ul style="font-size:1rem; color:#444; margin-top:1rem; padding-left:18px;">
-          <li>Pengoperasian mesin produksi karet</li>
-          <li>Kontrol kualitas produk seal</li>
-          <li>Pemahaman standar industri</li>
-          <li>Penerapan prinsip keselamatan kerja</li>
-        </ul>
-      </div>
-      <!-- Kolom Kanan: Gambar -->
-      <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1621707146454-c6b7151e0914?w=600&h=300&fit=crop"
-          alt="Mesin Karet"
-          style="width:100%; max-width:340px; border-radius:14px;">
-      </div>
+<section class="section" style="background:#f3f8ff;">
+  <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
+    <!-- Kolom Kiri: Teks -->
+    <div style="flex:1 1 340px; min-width:260px;">
+      <h2 style="color:#1565c0;">Tentang Pelatihan Rubber Seal</h2>
+      <p style="font-size:1.08rem; color:#444;">
+        Fokus pelatihan adalah pengolahan produk karet industri untuk otomotif dan manufaktur. 
+        Peserta akan memahami proses produksi dari awal hingga akhir melalui praktik langsung.
+      </p>
+      <ul style="font-size:1rem; color:#444; margin-top:1rem; padding-left:18px;">
+        <li>Pengoperasian mesin produksi karet</li>
+        <li>Kontrol kualitas produk seal</li>
+        <li>Pemahaman standar industri</li>
+        <li>Penerapan prinsip keselamatan kerja</li>
+      </ul>
     </div>
-
     <!-- Kolom Kanan: Gambar -->
     <div style="flex:1 1 340px; min-width:260px; text-align:center;">
       <img src="Website/images/mesin ruber.webp"
@@ -57,7 +55,6 @@
     </div>
   </div>
 </section>
-
 
 
   <!-- MENGAPA MEMILIH GSP -->
@@ -129,33 +126,51 @@
   </section>
 
   <!-- SLIDE 6: Klien yang Pernah Dilayani -->
-  <section class="section" style="background:#f8fbff;">
+   <section class="section" style="background:#f8fbff;">
     <div class="container">
       <h2 style="color:#1565c0; text-align:center; font-size:2.5rem; margin-bottom:1rem;">Klien yang Pernah Dilayani</h2>
       <p style="text-align:center; font-size:1.1rem; color:#666; margin-bottom:3rem;">Dipercaya oleh perusahaan dan institusi ternama</p>
 
-     
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center;">
-          <div style="text-align:center;">
-            <img src="Website/images/pt Inkom.png" alt="Aneka Bonecom" style="max-width:100px;">
-            <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Industri Komkar Indonesia</p>
-          </div>
-          <div style="text-align:center;">
-            <img src="Website/images/pt casuarina.jpeg" alt="Casuarina" style="max-width:100px;">
-            <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Casuarina HarnessIndo</p>
-          </div>
-          <div style="text-align:center;">
-            <img src="Website/images/PT Mega Putra Garmen.png" alt="vivere" style="max-width:100px;">
-            <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Mega Putra Garmen</p>
-          </div>
-          <div style="text-align:center;">
-            <img src="Website/images/pt wisnu.png" alt="karet" style="max-width:100px;">
-            <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Wisnu Cakra Perdana</p>
-          </div>
-  <div style="text-align:center;">
-          <img src="Website/images/PT Sakura Seal Manufaktur Indonesia.png" alt="karet" style="max-width:100px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center;">
+        <div style="text-align:center;">
+          <img src="Website/images/pt ab.png" alt="Aneka Bonecom" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Aneka Bonecom Component</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/pt casuarina.jpeg" alt="Casuarina" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Casuarina HarnessIndo</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/vivere.png" alt="vivere" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">VI VE RE GROUP</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/ggs.png" alt="ggs" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">G.G.S Interior, Manufacturing & MEP</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/pt mpg.png" alt="mega" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Mega Putra Garment</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/sakura.png" alt="sakura" style="max-width:100px;">
           <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Sakura Seal Manufaktur Indonesia</p>
         </div>
+        <div style="text-align:center;">
+          <img src="Website/images/tamo.png" alt="tamo" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Tamo Steel Manufacturing Indonesia</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/jafpa.png" alt="jafpa" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">JAFPA PT Ciomas Adisatwa</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/aneka karet.png" alt="karet" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Aneka Komponen Karet Utama (Component Rubbers Parts Otomotif)</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/pt wisnu.png" alt="karet" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Wisnu Cakra Perdana</p>
         </div>
       </div>
     </div>
@@ -214,28 +229,27 @@
   </section>
 
   <!-- SLIDE: Testimoni Pemagang Rubber Seal -->
-  <section class="section" style="background:#f3f8ff; padding:100px 0;">
-    <div class="container" style="max-width:1200px; margin:auto; padding:0 24px;">
-      <h2 style="color:#1565c0; text-align:center; font-size:2.8rem; margin-bottom:3rem;">
-        Testimoni Pemagang Rubber Seal
-      </h2>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:40px;">
+<section class="section" style="background:#f3f8ff; padding:100px 0;">
+  <div class="container" style="max-width:1200px; margin:auto; padding:0 24px;">
+    <h2 style="color:#1565c0; text-align:center; font-size:2.8rem; margin-bottom:3rem;">
+      Testimoni Pemagang Rubber Seal
+    </h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:40px;">
 
-        <!-- Testimoni 1 -->
-        <div style="background:#ffffff; border-radius:20px; padding:40px; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
-          <div style="display:flex; align-items:center; margin-bottom:1.5rem;">
-            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&h=80&fit=crop&crop=face" style="width:60px; height:60px; border-radius:50%; margin-right:15px;">
-            <div>
-              <h4 style="color:#1565c0; margin:0;">Rizky Pratama</h4>
-              <p style="color:#666; margin:0; font-size:0.9rem;">Magang di PT XYZ Rubber Industry</p>
-            </div>
+      <!-- Testimoni 1 -->
+      <div style="background:#ffffff; border-radius:20px; padding:40px; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
+        <div style="display:flex; align-items:center; margin-bottom:1.5rem;">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&h=80&fit=crop&crop=face" style="width:60px; height:60px; border-radius:50%; margin-right:15px;">
+          <div>
+            <h4 style="color:#1565c0; margin:0;">Rizky Pratama</h4>
+            <p style="color:#666; margin:0; font-size:0.9rem;">Magang di PT XYZ Rubber Industry</p>
           </div>
-          <p style="font-size:1.1rem; color:#444; font-style:italic;">
-            "Selama magang, saya belajar proses pembuatan rubber seal mulai dari pencampuran bahan hingga finishing. Sangat menambah wawasan saya di bidang manufaktur."
-          </p>
-          <div style="color:#ffd700; font-size:1.2rem; margin-top:1rem;">⭐⭐⭐⭐⭐</div>
         </div>
-
+        <p style="font-size:1.1rem; color:#444; font-style:italic;">
+          "Selama magang, saya belajar proses pembuatan rubber seal mulai dari pencampuran bahan hingga finishing. Sangat menambah wawasan saya di bidang manufaktur."
+        </p>
+        <div style="color:#ffd700; font-size:1.2rem; margin-top:1rem;">⭐⭐⭐⭐⭐</div>
+      </div>
 
       <!-- Testimoni 2 -->
       <div style="background:#ffffff; border-radius:20px; padding:40px; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
@@ -244,32 +258,32 @@
           <div>
             <h4 style="color:#1565c0; margin:0;">Putri Amelia</h4>
             <p style="color:#666; margin:0; font-size:0.9rem;">Magang di PT ABC Seal Manufacturing</p>
-
           </div>
-          <p style="font-size:1.1rem; color:#444; font-style:italic;">
-            "Instruktur membimbing saya memahami standar kualitas dan ketelitian dalam proses moulding rubber seal. Pengalaman ini sangat berharga."
-          </p>
-          <div style="color:#ffd700; font-size:1.2rem; margin-top:1rem;">⭐⭐⭐⭐⭐</div>
         </div>
-
-        <!-- Testimoni 3 -->
-        <div style="background:#ffffff; border-radius:20px; padding:40px; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
-          <div style="display:flex; align-items:center; margin-bottom:1.5rem;">
-            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=80&h=80&fit=crop&crop=face" style="width:60px; height:60px; border-radius:50%; margin-right:15px;">
-            <div>
-              <h4 style="color:#1565c0; margin:0;">Fajar Nugraha</h4>
-              <p style="color:#666; margin:0; font-size:0.9rem;">Magang di PT Karetindo Sejahtera</p>
-            </div>
-          </div>
-          <p style="font-size:1.1rem; color:#444; font-style:italic;">
-            "Magang ini memberi saya kesempatan untuk bekerja langsung di lini produksi rubber seal dan memahami pentingnya kontrol suhu dan tekanan dalam prosesnya."
-          </p>
-          <div style="color:#ffd700; font-size:1.2rem; margin-top:1rem;">⭐⭐⭐⭐⭐</div>
-        </div>
-
+        <p style="font-size:1.1rem; color:#444; font-style:italic;">
+          "Instruktur membimbing saya memahami standar kualitas dan ketelitian dalam proses moulding rubber seal. Pengalaman ini sangat berharga."
+        </p>
+        <div style="color:#ffd700; font-size:1.2rem; margin-top:1rem;">⭐⭐⭐⭐⭐</div>
       </div>
+
+      <!-- Testimoni 3 -->
+      <div style="background:#ffffff; border-radius:20px; padding:40px; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
+        <div style="display:flex; align-items:center; margin-bottom:1.5rem;">
+          <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=80&h=80&fit=crop&crop=face" style="width:60px; height:60px; border-radius:50%; margin-right:15px;">
+          <div>
+            <h4 style="color:#1565c0; margin:0;">Fajar Nugraha</h4>
+            <p style="color:#666; margin:0; font-size:0.9rem;">Magang di PT Karetindo Sejahtera</p>
+          </div>
+        </div>
+        <p style="font-size:1.1rem; color:#444; font-style:italic;">
+          "Magang ini memberi saya kesempatan untuk bekerja langsung di lini produksi rubber seal dan memahami pentingnya kontrol suhu dan tekanan dalam prosesnya."
+        </p>
+        <div style="color:#ffd700; font-size:1.2rem; margin-top:1rem;">⭐⭐⭐⭐⭐</div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 
   <!-- CTA Section -->
@@ -278,17 +292,17 @@
       <h2 style="font-size:2.5rem; margin-bottom:1rem; color:#fff;">Butuh Info Pemagangan?</h2>
       <p style="font-size:1.2rem; margin-bottom:2rem; color:#bbdefb;">Hubungi kami sekarang!</p>
       <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
-        <a href="https://wa.me/6282328085554" target="_blank" style="background:#42a5f5; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           🧹 WhatsApp Pendaftaran
         </a>
-        <a href="tel:+6282328085554" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #42a5f5; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="tel:+6281234567890" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #42a5f5; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           📞 Call Now
         </a>
       </div>
     </div>
   </section>
 
-  <?= $this->endSection() ?>
+  <?php echo $this->include('website/Footer'); ?>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -327,7 +341,7 @@
       });
     });
   </script>
-  <script src="Website/js/scripts.js"></script>
+    <script src="Website/js/scripts.js"></script>
 </body>
 
 </html>
