@@ -10,13 +10,13 @@ class LamaranModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = [
         'nama_lengkap',
+        'nik',      
         'email',
         'phone',
         'position',
         'address',
-        'cv_file',
-        'experience',
-        'created_at',
-        'status'
+        'asal_sekolah',
+        'status',
+        'created_at'
     ];
 }

@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="id">
+<link rel="stylesheet" href="Website/css/services.css" />
+<?= $this->extend('website\website') ?>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gardening Services - PT Gemilang Sapta Perdana</title>
-  <link rel="stylesheet" href="Website/css/services.css" />
-</head>
+<?= $this->section('content') ?>
 
 <body>
-  <?php include 'header.php'; ?>
-<br>
+
+  <br>
   <!-- SLIDE 1: Hero Section -->
-  <section class="hero" style="background: #2e7d32; color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
+  <section class="hero" style="background: linear-gradient(135deg, #02a85a 0%, #02a85a 100%);; color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:32px; padding:56px 24px;">
       <div style="flex:1 1 420px; min-width:280px; z-index:2;">
         <h1 style="font-size:2.8rem; margin-bottom:0.7rem;">Gardening Services</h1>
@@ -20,10 +15,10 @@
         <p style="font-size:1.13rem; color:#e8f5e9; margin-bottom:1.5rem; max-width:500px;">
           Kami menyediakan layanan taman lengkap untuk area komersial dan residensial, mulai dari desain, instalasi, hingga pemeliharaan berkala oleh tenaga ahli pertamanan.
         </p>
-        <a href="https://wa.me/6281234567890" target="_blank" style="background:#66bb6a; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
+        <a href="https://wa.me/6282328085554" target="_blank" style="background:#66bb6a; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
       </div>
       <div style="flex:1 1 420px; min-width:280px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=900&h=500&fit=crop" alt="Gardening Services" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
+        <img src="Website/gardener/gardener1.png" alt="Gardening Services" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
       </div>
     </div>
   </section>
@@ -44,7 +39,7 @@
         </ul>
       </div>
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400&h=180&fit=crop" alt="Gardening Overview" style="width:100%; max-width:340px; border-radius:14px;">
+        <img src="Website/gardener/gardener6.jpg" alt="Gardening Overview" style="width:100%; max-width:340px; border-radius:14px;">
 
       </div>
     </div>
@@ -54,7 +49,7 @@
   <section class="section">
     <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400&h=180&fit=crop" alt="Keunggulan Gardening" style="width:100%; max-width:340px; border-radius:14px;">
+        <img src="Website/gardener/gardener4.jpg" alt="Keunggulan Gardening" style="width:100%; max-width:340px; border-radius:14px;">
       </div>
       <div style="flex:1 1 340px; min-width:260px;">
         <h2 style="color:#388e3c;">Mengapa Memilih GSP?</h2>
@@ -70,115 +65,99 @@
   </section>
 
   <!-- SLIDE 4: Jenis Layanan -->
-  <section class="section" style="background:#f1fdf7;">
-    <div class="container">
-      <h2 style="color:#388e3c; text-align:center;">Jenis Layanan Gardening</h2>
-      <div style="display:flex; flex-wrap:wrap; gap:32px; justify-content:center; margin-top:2rem;">
-        <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=320&h=160&fit=crop" alt="Taman Rumah" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
-          <h3 style="color:#388e3c;">Taman Rumah & Perumahan</h3>
+  
+  <section class="cleaning-section">
+    <div class="cleaning-container">
+      <h2 class="cleaning-title">Jenis Layanan Gardening</h2>
+      <div class="cleaning-grid">
+
+        <div class="cleaning-card">
+
+          <div class="cleaning-image-container">
+            <img src="Website/gardener/gardener3.jpg"
+              alt="Taman Rumah & Perumahan" class="cleaning-image">
+          </div>
+          <h3>Taman Rumah & Perumahan</h3>
           <p>Desain dan perawatan taman perumahan modern dan minimalis.</p>
         </div>
-        <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=320&h=160&fit=crop" alt="Taman Rumah" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
-          <h3 style="color:#388e3c;">Vertical Garden</h3>
+
+        <div class="cleaning-card">
+
+          <div class="cleaning-image-container">
+            <img src="Website/gardener/gardener5.jpg"
+              alt="Vertical Garden" class="cleaning-image">
+          </div>
+          <h3>Vertical Garden</h3>
           <p>Solusi taman hijau di ruang terbatas seperti dinding kantor atau apartemen.</p>
         </div>
-        <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=320&h=160&fit=crop" alt="Pemeliharaan Taman" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
-          <h3 style="color:#388e3c;">Pemeliharaan Taman</h3>
+
+        <div class="cleaning-card">
+
+          <div class="cleaning-image-container">
+            <img src="Website/gardener/gardener2.jpg"
+              alt="Pemeliharaan Taman" class="cleaning-image">
+          </div>
+          <h3>Pemeliharaan Taman</h3>
           <p>Perawatan rumput, pemangkasan, pemupukan, dan irigasi taman secara berkala.</p>
         </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- SLIDE 5: Hasil Proyek yang Sudah Dikerjakan -->
-  <section id="projects" class="section">
+ <section id="projects" class="section">
     <div class="container">
-      <h2 class="section-title">Hasil Proyek yang Sudah Dikerjakan</h2>
-      <p class="section-subtitle">Berikut adalah dokumentasi dari beberapa hasil proyek Gardening Services yang telah kami kerjakan bersama mitra kami.</p>
-      <div class="services-grid">
+        <h2 class="section-title">Hasil Proyek yang Sudah Dikerjakan</h2>
+        <p class="section-subtitle">Berikut adalah dokumentasi dari beberapa hasil proyek Gardening Services yang telah kami kerjakan bersama mitra kami.</p>
+        <div class="services-grid">
 
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400&h=180&fit=crop"
-            alt="Taman Kantor PT Nusantara Abadi" class="service-image">
-          <h3>Taman Kantor PT Nusantara Abadi</h3>
-          <p>Penataan dan pemeliharaan taman di lingkungan kantor pusat Jakarta untuk meningkatkan kenyamanan dan estetika area kerja.</p>
+            <div class="service-card">
+                <img src="Website/gardener/gardener4.jpg" alt="Pemeliharaan Taman Kota Cendana" class="service-image">
+                <div class="service-content">
+                    <h3>Pemeliharaan Taman Kota Cendana</h3>
+                    <p>Kerjasama rutin dengan pemerintah daerah untuk menjaga kebersihan dan keindahan taman kota sebagai ruang publik.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="Website/gardener/gardener3.jpg" alt="Vertical Garden Gedung Sentral" class="service-image">
+                <div class="service-content">
+                    <h3>Vertical Garden Gedung Sentral</h3>
+                    <p>Instalasi taman vertikal di dinding gedung perkantoran sebagai elemen penghijauan modern dan penyejuk udara alami.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="Website/gardener/gardener2.jpg" alt="Taman Edukasi Sekolah Harapan Bangsa" class="service-image">
+                <div class="service-content">
+                    <h3>Taman Edukasi Sekolah Harapan Bangsa</h3>
+                    <p>Pembuatan taman interaktif sebagai media pembelajaran anak-anak untuk mengenal tanaman dan lingkungan secara langsung.</p>
+                </div>
+            </div>
+
         </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400&h=180&fit=crop"
-            alt="Taman Cluster Green Residence" class="service-image">
-          <h3>Taman Cluster Green Residence</h3>
-          <p>Pembuatan taman utama di area perumahan eksklusif yang memberikan suasana hijau dan sejuk bagi penghuni.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400&h=180&fit=crop"
-            alt="Lanskap Hotel Grand Sari" class="service-image">
-          <h3>Lanskap Hotel Grand Sari</h3>
-          <p>Pengembangan taman tropis di halaman depan hotel sebagai area santai bagi tamu dan nilai tambah estetika properti.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=400&h=180&fit=crop"
-            alt="Pemeliharaan Taman Kota Cendana" class="service-image">
-          <h3>Pemeliharaan Taman Kota Cendana</h3>
-          <p>Kerjasama rutin dengan pemerintah daerah untuk menjaga kebersihan dan keindahan taman kota sebagai ruang publik.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62?w=400&h=180&fit=crop"
-            alt="Vertical Garden Gedung Sentral" class="service-image">
-          <h3>Vertical Garden Gedung Sentral</h3>
-          <p>Instalasi taman vertikal di dinding gedung perkantoran sebagai elemen penghijauan modern dan penyejuk udara alami.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400&h=180&fit=crop"
-            alt="Taman Edukasi Sekolah Harapan Bangsa" class="service-image">
-          <h3>Taman Edukasi Sekolah Harapan Bangsa</h3>
-          <p>Pembuatan taman interaktif sebagai media pembelajaran anak-anak untuk mengenal tanaman dan lingkungan secara langsung.</p>
-        </div>
-
-      </div>
     </div>
-  </section>
+</section>
 
 
   <!-- SLIDE 6: Klien yang Pernah Dilayani -->
-   <section class="section" style="background:#f8fbff;">
+  <section class="section" style="background:#f8fbff;">
     <div class="container">
       <h2 style="color:#1565c0; text-align:center; font-size:2.5rem; margin-bottom:1rem;">Klien yang Pernah Dilayani</h2>
       <p style="text-align:center; font-size:1.1rem; color:#666; margin-bottom:3rem;">Dipercaya oleh perusahaan dan institusi ternama</p>
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center;">
         <div style="text-align:center;">
-          <img src="Website/images/mandiri.jpeg" alt="Bank Mandiri" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Bank Mandiri</p>
+          <img src="Website/images/Joglo_Ageng.jpeg" alt="Bank Mandiri" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Joglo Ageng Hotel & Resort</p>
         </div>
         <div style="text-align:center;">
-          <img src="Website/images/shangri.jpeg" alt="Shangri-La Hotels" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Shangri-La Hotels</p>
+          <img src="Website/images/Kemnaker.svg" alt="Kemnaker" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Kemnaker</p>
         </div>
-        <div style="text-align:center;">
-          <img src="Website/images/grand_indonesia.jpeg" alt="Grand Indonesia" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Grand Indonesia</p>
-        </div>
-        <div style="text-align:center;">
-          <img src="Website/images/siloam.jpeg" alt="RS Siloam" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">RS Siloam</p>
-        </div>
-        <div style="text-align:center;">
-          <img src="Website/images/bca.jpeg" alt="Menara BCA" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Menara BCA</p>
-        </div>
-        <div style="text-align:center;">
-          <img src="Website/images/astra.jpeg" alt="Astra International" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Astra International</p>
-        </div>
+        
       </div>
     </div>
   </section>
@@ -285,22 +264,22 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="section" style="background:#2e7d32; color:#fff; text-align:center; padding:80px 0;">
+  <section class="section" style="background:linear-gradient(135deg, #02a85a 0%, #02a85a 100%);; color:#fff; text-align:center; padding:80px 0;">
     <div class="container">
       <h2 style="font-size:2.5rem; margin-bottom:1rem; color:#fff;">Siap Mewujudkan Taman Impian Anda?</h2>
       <p style="font-size:1.2rem; margin-bottom:2rem; color:#c8e6c9;">Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran terbaik!</p>
       <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
-        <a href="https://wa.me/6281234567890" target="_blank" style="background:#66bb6a; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="https://wa.me/6282328085554" target="_blank" style="background:#66bb6a; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           📱 WhatsApp Konsultasi
         </a>
-        <a href="tel:+6281234567890" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #66bb6a; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="tel:+6282328085554" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #66bb6a; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           📞 Call Now
         </a>
       </div>
     </div>
   </section>
 
-  <?php include 'Footer.php'; ?>
+  <?= $this->endSection() ?>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -338,9 +317,8 @@
           });
       });
     });
-    
   </script>
-      <script src="Website/js/scripts.js"></script>
+  <script src="Website/js/scripts.js"></script>
 </body>
 
 </html>

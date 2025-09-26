@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="id">
+     <?= $this->extend('website\website') ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Lamaran Pekerjaan - PT Gemilang</title>
+     <?= $this->section('content') ?>
+
     <style>
         * {
             margin: 0;
@@ -434,8 +431,8 @@
                 font-size: 0.95rem;
             }
         }
-    </style>
-    <?php include 'header.php'; ?>
+    </style>  
+ 
     <br>
 </head>
 
@@ -443,15 +440,18 @@
     <div class="job-application-container">
         <div class="form-header">
             <h1>Form Lamaran Pekerjaan</h1>
-            <p>Bergabunglah dengan PT Gemilang dan wujudkan karir impian Anda</p>
+            <p>Bergabunglah dengan PT Gemilang Sapta Perdana dan wujudkan karir impian Anda</p>
         </div>
 
         <div class="form-content">
-            <?php if (session()->getFlashdata('error')): ?>
-                <div style="color:red;">
-                    <?= session()->getFlashdata('error') ?>
-                </div>
+            <?php if (session()->get('errors')): ?>
+                <ul>
+                    <?php foreach (session()->get('errors') as $error): ?>
+                        <li class="text-danger"><?= $error ?></li>
+                    <?php endforeach; ?>
+                </ul>
             <?php endif; ?>
+
 
             <?php if (session()->getFlashdata('success')): ?>
                 <div style="color:green;">
@@ -459,7 +459,7 @@
                 </div>
             <?php endif; ?>
 
-            <form action="/lamaran/save" method="post" enctype="multipart/form-data">
+            <form action="/lamaran/save" method="post">
                 <?= csrf_field() ?>
                 <div class="form-section">
                     <h3 class="section-title">
@@ -472,12 +472,18 @@
                             <label for="nama_lengkap">Nama Lengkap:</label>
                             <input type="text" id="nama_lengkap" name="nama_lengkap" value="<?= old('nama_lengkap') ?>" placeholder="Masukkan nama lengkap Anda">
                         </div>
+                        <div class="form-group">
+                            <label for="nik">Nomer Induk Kependudukan (NIK)</label>
+                            <input type="text" name="nik" id="nik" class="form-control" value="<?= old('nik') ?>" placeholder="Masukkan Nomer induk kependudukan (NIK)">
+                        </div>
+
 
                         <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" id="email" name="email" value="<?= old('email') ?>" placeholder="contoh@email.com">
                         </div>
                     </div>
+
 
                     <div class="form-row">
                         <div class="form-group">
@@ -506,66 +512,37 @@
                             </select>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-section">
-                    <h3 class="section-title">
-                        <span class="section-icon">📍</span>
-                        Informasi Tambahan
-                    </h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="asal_sekolah">Pendidikan Terakhir:</label>
+                            <input type="text" id="asal_sekolah" name="asal_sekolah" value="<?= old('asal_sekolah') ?>" placeholder="Masukkan asal sekolah Anda">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="address">Alamat:</label>
-                        <textarea id="address" name="address" placeholder="Masukkan alamat lengkap Anda"><?= old('address') ?></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="experience">Pengalaman Kerja:</label>
-                        <textarea id="experience" name="experience" placeholder="Ceritakan pengalaman kerja Anda sebelumnya"><?= old('experience') ?></textarea>
-                    </div>
-                </div>
-
-                <div class="form-section">
-                    <h3 class="section-title">
-                        <span class="section-icon">📎</span>
-                        Upload CV/Resume
-                    </h3>
-
-                    <div class="form-group">
-                        <label for="cv">Upload CV (PDF/DOC/DOCX)</label>
-                        <small style="display:block; color:#666; margin-bottom:8px;">
-                            Maksimal 5MB per file. Bisa upload lebih dari satu file.
-                        </small>
-
-                        <div class="file-upload" style="border:2px dashed #ccc; padding:15px; text-align:center; border-radius:8px; background:#fafafa;">
-                            <input type="file" id="cv" name="cv[]" multiple accept=".pdf,.doc,.docx" style="display:none;" required>
-                            <label for="cv" style="cursor:pointer; background:#007bff; color:#fff; padding:8px 16px; border-radius:4px;">
-                                Pilih File
-                            </label>
-                            <div id="fileList" style="margin-top:15px;">
-                                <!-- List file akan muncul di sini -->
-                            </div>
+                        <div class="form-group">
+                            <label for="address">Alamat:</label>
+                            <textarea id="address" name="address" placeholder="Masukkan alamat lengkap Anda"><?= old('address') ?></textarea>
                         </div>
                     </div>
                 </div>
-
 
                 <div class="btn-container">
                     <button type="submit">Kirim Lamaran</button>
                 </div>
             </form>
+
         </div>
 
         <div class="form-footer">
-            © 2024 PT Gemilang. Semua data yang Anda berikan akan dijaga kerahasiaannya.
+            © 2025 PT Gemilang Sapta Perdana. Semua data yang Anda berikan akan dijaga kerahasiaannya.
         </div>
     </div>
 </body>
 
 </html>
-
+ <?= $this->endSection() ?>
 <script>
-     document.getElementById('cv').addEventListener('change', function(e) {
+    document.getElementById('cv').addEventListener('change', function(e) {
         let fileList = document.getElementById('fileList');
         fileList.innerHTML = '';
 

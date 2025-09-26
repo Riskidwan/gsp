@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="id">
+<?= $this->extend('website\website') ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PT. Gemilang Sapta Perdana</title>
-    <link rel="stylesheet" href="Website/css/main.css">
-    <link rel="stylesheet" href="Website/css/main.css?v=<?php echo time(); ?>">
-    <!-- 
-   <link rel="scripts" href="assets/js/scripts.js"> -->
-</head>
+<?= $this->section('content') ?>
 
 <body>
     <!-- Header -->
-    <?php include 'header.php'; ?>
-<br>
+
+    <br>
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -41,7 +31,7 @@
                         <div class="contact-icon">🏢</div>
                         <div class="contact-details">
                             <div class="contact-label">Perusahaan</div>
-                            <div class="contact-value">PT. Gemilang Sapta Perdana</div>
+                            <div class="contact-value">PT Gemilang Sapta Perdana</div>
                         </div>
                     </div>
 
@@ -57,7 +47,7 @@
                         <div class="contact-icon">🤝</div>
                         <div class="contact-details">
                             <div class="contact-label">Mitra Strategis</div>
-                            <div class="contact-value">Balai Perluasan Kesempatan Kerja</div>
+                            <div class="contact-value">BKK di Pemalang</div>
                         </div>
                     </div>
 
@@ -65,7 +55,7 @@
                         <div class="contact-icon">⏰</div>
                         <div class="contact-details">
                             <div class="contact-label">Jam Operasional</div>
-                            <div class="contact-value">Senin - Jumat: 08:00 - 17:00<br>Sabtu: 08:00 - 12:00</div>
+                            <div class="contact-value">Senin - Jumat: 08:00 - 17:00</div>
                         </div>
                     </div>
                 </div>
@@ -106,7 +96,7 @@
         </div>
     </section>
 
-    <?php include 'Footer.php'; ?>
+    <?= $this->endSection() ?>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {

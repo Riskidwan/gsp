@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="id">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Labor Supply Services - PT Gemilang Sapta Perdana</title>
-  <link rel="stylesheet" href="Website/css/services.css" />
-</head>
 
 <body>
-  <?php include 'header.php'; ?>
+<?= $this->extend('website\website') ?>
+
+     <?= $this->section('content') ?>
 <br>
   <!-- SLIDE 1: Hero Section -->
-  <section class="hero" style="background: #1565c0; color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
+  <section class="hero" style="background: #02a85a; color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:32px; padding:56px 24px;">
       <div style="flex:1 1 420px; min-width:280px; z-index:2;">
         <h1 style="font-size:2.8rem; margin-bottom:0.7rem;">Labor Supply Services</h1>
@@ -20,10 +13,10 @@
         <p style="font-size:1.13rem; color:#e3f2fd; margin-bottom:1.5rem; max-width:500px;">
           Kami menyediakan layanan penyediaan tenaga kerja berkualitas untuk kebutuhan industri, konstruksi, manufaktur, dan sektor bisnis lainnya dengan standar profesional tinggi.
         </p>
-        <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
+        <a href="https://wa.me/6282328085554" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
       </div>
       <div style="flex:1 1 420px; min-width:280px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&h=500&fit=crop" alt="Labor Supply Services" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
+        <img src="Website/Labor_supply/Labor Supply1.jpg" alt="Labor Supply Services" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
       </div>
     </div>
   </section>
@@ -44,7 +37,7 @@
         </ul>
       </div>
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=180&fit=crop" alt="Labor Supply Overview" style="width:100%; max-width:340px; border-radius:14px;">
+        <img src="Website/Labor_supply/Labor Supply4.jpg" alt="Labor Supply Overview" style="width:100%; max-width:340px; border-radius:14px;">
       </div>
     </div>
   </section>
@@ -53,7 +46,7 @@
   <section class="section">
     <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=180&fit=crop" alt="Keunggulan Labor Supply" style="width:100%; max-width:340px; border-radius:14px;">
+        <img src="Website/Labor_supply/Labor Supply5.jpg" alt="Keunggulan Labor Supply" style="width:100%; max-width:340px; border-radius:14px;">
       </div>
       <div style="flex:1 1 340px; min-width:260px;">
         <h2 style="color:#1565c0;">Mengapa Memilih GSP?</h2>
@@ -74,17 +67,17 @@
       <h2 style="color:#1565c0; text-align:center;">Jenis Layanan Labor Supply</h2>
       <div style="display:flex; flex-wrap:wrap; gap:32px; justify-content:center; margin-top:2rem;">
         <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=320&h=160&fit=crop" alt="Konstruksi" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
-          <h3 style="color:#1565c0;">Tenaga Kerja Konstruksi</h3>
+          <img src="Website/Labor_supply/Labor Supply12.jpg" alt="Konstruksi" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
+          <h3 style="color:#1565c0;">tenaga kerja instansi </h3>
           <p>Penyediaan pekerja konstruksi berpengalaman untuk proyek bangunan dan infrastruktur.</p>
         </div>
         <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=320&h=160&fit=crop" alt="Manufaktur" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
-          <h3 style="color:#1565c0;">Pekerja Manufaktur</h3>
+          <img src="Website/Labor_supply/Labor Supply10.jpg" alt="Manufaktur" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
+          <h3 style="color:#1565c0;">pemeliharaan Gedung </h3>
           <p>Operator mesin dan pekerja produksi untuk industri manufaktur dan pabrik.</p>
         </div>
         <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=320&h=160&fit=crop" alt="Warehouse" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
+          <img src="Website/Labor_supply/Labor Supply9.jpg" alt="Warehouse" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
           <h3 style="color:#1565c0;">Pekerja Warehouse</h3>
           <p>Tenaga kerja untuk operasional gudang, logistik, dan distribusi barang.</p>
         </div>
@@ -94,56 +87,50 @@
 
   <!-- SLIDE 5: Hasil Proyek yang Sudah Dikerjakan -->
   <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title">Proyek yang Sudah Dikerjakan</h2>
-      <p class="section-subtitle">Berikut adalah dokumentasi dari beberapa proyek penyediaan tenaga kerja yang telah kami kerjakan bersama mitra kami.</p>
-      <div class="services-grid">
+  <div class="container">
+    <h2 class="section-title">Proyek yang Sudah Dikerjakan</h2>
+    <p class="section-subtitle">Berikut adalah dokumentasi dari beberapa proyek penyediaan tenaga kerja yang telah kami kerjakan bersama mitra kami.</p>
+    <div class="services-grid">
 
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=180&fit=crop"
-            alt="Proyek Konstruksi PT Wijaya Karya" class="service-image">
-          <h3>Proyek Konstruksi PT Wijaya Karya</h3>
-          <p>Penyediaan 150 pekerja konstruksi untuk proyek pembangunan kompleks perkantoran di Jakarta Selatan.</p>
+      <div class="service-card">
+        <div class="service-image-container">
+          <img src="Website/Labor_supply/Labor Supply7.jpg" alt="Pembangunan Gedung UIN Gusdur Pekalongan" class="service-image">
         </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=180&fit=crop"
-            alt="Pabrik PT Indofood Sukses Makmur" class="service-image">
-          <h3>Pabrik PT Indofood Sukses Makmur</h3>
-          <p>Kontrak jangka panjang untuk menyediakan operator mesin dan pekerja produksi di pabrik makanan.</p>
+        <div class="service-content">
+          <div>
+            <h3>UIN Gusdur Pekalongan</h3>
+            <p>Penyediaan tenaga kerja konstruksi untuk mendukung pembangunan dan pengembangan fasilitas gedung di lingkungan kampus UIN K.H. Abdurrahman Wahid Pekalongan.</p>
+          </div>
         </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=180&fit=crop"
-            alt="Warehouse Amazon Indonesia" class="service-image">
-          <h3>Warehouse Amazon Indonesia</h3>
-          <p>Penyediaan tenaga kerja untuk operasional warehouse dan fulfillment center di Bekasi.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=180&fit=crop"
-            alt="Proyek Infrastruktur BUMN" class="service-image">
-          <h3>Proyek Infrastruktur BUMN</h3>
-          <p>Kerjasama dengan BUMN untuk penyediaan tenaga kerja pada proyek infrastruktur jalan tol.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=180&fit=crop"
-            alt="Pemeliharaan Pabrik PT Astra" class="service-image">
-          <h3>Pemeliharaan Pabrik PT Astra</h3>
-          <p>Kontrak maintenance untuk penyediaan teknisi dan pekerja maintenance di pabrik otomotif.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=180&fit=crop"
-            alt="Event Organizer Jakarta Fair" class="service-image">
-          <h3>Event Organizer Jakarta Fair</h3>
-          <p>Penyediaan tenaga kerja untuk setup dan operasional event besar Jakarta Fair Kemayoran.</p>
-        </div>
-
       </div>
+
+      <div class="service-card">
+        <div class="service-image-container">
+          <img src="Website/Labor_supply/Labor Supply6.jpg" alt="Proyek Infrastruktur Kementerian PUPR" class="service-image">
+        </div>
+        <div class="service-content">
+          <div>
+            <h3>Kementerian PUPR</h3>
+            <p>Bermitra dalam penyediaan tenaga kerja ahli dan terampil untuk mendukung berbagai proyek infrastruktur strategis nasional yang diinisiasi oleh Kementerian PUPR.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image-container">
+          <img src="Website/Labor_supply/Labor Supply3.jpg" alt="Pemeliharaan Gedung Wisma Atlet Pademangan" class="service-image">
+        </div>
+        <div class="service-content">
+          <div>
+            <h3>Gedung Wisma Atlet Pademangan</h3>
+            <p>Penyediaan tenaga kerja profesional untuk layanan pemeliharaan gedung (building maintenance) dan manajemen fasilitas di kompleks Wisma Atlet Pademangan.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- SLIDE 6: Klien yang Pernah Dilayani -->
   <section class="section" style="background:#f8fbff;">
@@ -153,29 +140,22 @@
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center;">
         <div style="text-align:center;">
-          <img src="Website/images/mandiri.jpeg" alt="Bank Mandiri" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Bank Mandiri</p>
+          <img src="Website/images/UIN_Gusdur.jpeg" alt="Bank Mandiri" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">UIN Gusdur Pekalongan</p>
         </div>
         <div style="text-align:center;">
-          <img src="Website/images/shangri.jpeg" alt="Shangri-La Hotels" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Shangri-La Hotels</p>
+          <img src="Website/images/Kemnaker.svg" alt="Shangri-La Hotels" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Kemnaker</p>
         </div>
         <div style="text-align:center;">
-          <img src="Website/images/grand_indonesia.jpeg" alt="Grand Indonesia" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Grand Indonesia</p>
+          <img src="Website/images/kementerian_PUPR.jpeg" alt="Grand Indonesia" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">kementerian PUPR</p>
         </div>
         <div style="text-align:center;">
-          <img src="Website/images/siloam.jpeg" alt="RS Siloam" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">RS Siloam</p>
+          <img src="Website/images/PT_Mega_Perintis.png" alt="RS Siloam" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Mega Perintis</p>
         </div>
-        <div style="text-align:center;">
-          <img src="Website/images/bca.jpeg" alt="Menara BCA" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Menara BCA</p>
-        </div>
-        <div style="text-align:center;">
-          <img src="Website/images/astra.jpeg" alt="Astra International" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Astra International</p>
-        </div>
+       
       </div>
     </div>
   </section>
@@ -278,22 +258,22 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="section" style="background:#1565c0; color:#fff; text-align:center; padding:80px 0;">
+  <section class="section" style="background:linear-gradient(135deg, #02a85a 0%, #02a85a 100%);; color:#fff; text-align:center; padding:80px 0;">
     <div class="container">
       <h2 style="font-size:2.5rem; margin-bottom:1rem; color:#fff;">Butuh Tenaga Kerja Berkualitas?</h2>
       <p style="font-size:1.2rem; margin-bottom:2rem; color:#bbdefb;">Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran terbaik!</p>
       <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
-        <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="https://wa.me/6282328085554" target="_blank" style="background:#42a5f5; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           📱 WhatsApp Konsultasi
         </a>
-        <a href="tel:+6281234567890" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #42a5f5; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="tel:+6282328085554" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #42a5f5; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           📞 Call Now
         </a>
       </div>
     </div>
   </section>
 
-  <!-- <?php include 'Footer.php'; ?> -->
+ <?= $this->endSection() ?>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {

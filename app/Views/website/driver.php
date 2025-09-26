@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="id">
+<link rel="stylesheet" href="Website/css/services.css" />
+<?= $this->extend('website\website') ?>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Driver Training Services - PT Gemilang Sapta Perdana</title>
-  <link rel="stylesheet" href="Website/css/services.css" />
-</head>
+<?= $this->section('content') ?>
+
 
 <body>
-  <?php include 'header.php'; ?>
-<br>
+
+  <br>
   <!-- SLIDE 1: Hero Section -->
-  <section class="hero" style="background: #1565c0; color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
+  <section class="hero" style="background: #02a85a; color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:32px; padding:56px 24px;">
       <div style="flex:1 1 420px; min-width:280px; z-index:2;">
         <h1 style="font-size:2.8rem; margin-bottom:0.7rem;">Driver Training Services</h1>
@@ -20,10 +16,10 @@
         <p style="font-size:1.13rem; color:#e3f2fd; margin-bottom:1.5rem; max-width:500px;">
           Kami menyediakan pelatihan driver lengkap untuk kendaraan pribadi, komersial, dan perusahaan. Mulai dari pelatihan dasar hingga advanced defensive driving oleh instruktur berpengalaman dan berlisensi.
         </p>
-        <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
+        <a href="https://wa.me/6282328085554" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
       </div>
       <div style="flex:1 1 420px; min-width:280px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=900&h=500&fit=crop" alt="Driver Training Services" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
+        <img src="Website/driver/driver3.png" alt="Driver Training Services" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
       </div>
     </div>
   </section>
@@ -40,11 +36,10 @@
           <li>Pelatihan dasar mengemudi untuk pemula</li>
           <li>Defensive driving & safety training</li>
           <li>Pelatihan driver kendaraan berat</li>
-          <li>Sertifikasi dan ujian SIM</li>
         </ul>
       </div>
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=180&fit=crop" alt="Driver Training Overview" style="width:100%; max-width:340px; border-radius:14px;">
+        <img src="Website/driver/driver2.png" style="width:100%; max-width:340px; border-radius:14px;">
       </div>
     </div>
   </section>
@@ -53,7 +48,7 @@
   <section class="section">
     <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=180&fit=crop" alt="Keunggulan Driver Training" style="width:100%; max-width:340px; border-radius:14px;">
+        <img src="Website/driver/driver1.png" alt="Keunggulan Driver Training" style="width:100%; max-width:340px; border-radius:14px;">
       </div>
       <div style="flex:1 1 340px; min-width:260px;">
         <h2 style="color:#1565c0;">Mengapa Memilih GSP?</h2>
@@ -61,7 +56,7 @@
           <li>Instruktur berpengalaman dan berlisensi</li>
           <li>Kurikulum pelatihan terstruktur dan komprehensif</li>
           <li>Fasilitas training modern dan aman</li>
-          <li>Sertifikat resmi dan diakui</li>
+
           <li>Harga kompetitif & paket fleksibel</li>
         </ul>
       </div>
@@ -74,17 +69,17 @@
       <h2 style="color:#1565c0; text-align:center;">Jenis Layanan Driver Training</h2>
       <div style="display:flex; flex-wrap:wrap; gap:32px; justify-content:center; margin-top:2rem;">
         <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=320&h=160&fit=crop" alt="Pelatihan Dasar" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
+          <img src="Website/driver/driver3.png" alt="Pelatihan Dasar" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
           <h3 style="color:#1565c0;">Pelatihan Dasar Mengemudi</h3>
           <p>Pelatihan mengemudi untuk pemula dengan fokus pada teknik dasar dan keselamatan.</p>
         </div>
         <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=320&h=160&fit=crop" alt="Defensive Driving" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
+          <img src="Website/driver/driver4.png" alt="Defensive Driving" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
           <h3 style="color:#1565c0;">Defensive Driving</h3>
           <p>Pelatihan mengemudi defensif untuk mengantisipasi dan menghindari kecelakaan.</p>
         </div>
         <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=320&h=160&fit=crop" alt="Driver Kendaraan Berat" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
+          <img src="Website/driver/driver5.png" alt="Driver Kendaraan Berat" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
           <h3 style="color:#1565c0;">Driver Kendaraan Berat</h3>
           <p>Pelatihan khusus untuk mengoperasikan truk, bus, dan kendaraan berat lainnya.</p>
         </div>
@@ -100,46 +95,27 @@
       <div class="services-grid">
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=180&fit=crop"
-            alt="Pelatihan Driver PT Logistik Nusantara" class="service-image">
-          <h3>Pelatihan Driver PT Logistik Nusantara</h3>
-          <p>Program pelatihan defensive driving untuk 50 driver perusahaan logistik guna meningkatkan keselamatan perjalanan.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=180&fit=crop"
-            alt="Safety Training Hotel Grand Sari" class="service-image">
-          <h3>Safety Training Hotel Grand Sari</h3>
-          <p>Pelatihan keselamatan berkendara untuk driver shuttle hotel dan kendaraan operasional.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=180&fit=crop"
-            alt="Pelatihan Driver Bus Sekolah" class="service-image">
-          <h3>Pelatihan Driver Bus Sekolah</h3>
-          <p>Program khusus pelatihan driver bus sekolah dengan fokus pada keselamatan anak-anak.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=180&fit=crop"
+          <img src="Website/driver/driver3.png"
             alt="Corporate Driver Training Bank Mandiri" class="service-image">
-          <h3>Corporate Driver Training Bank Mandiri</h3>
+          <h3>Driver Training Korporat</h3>
           <p>Pelatihan driver korporat untuk meningkatkan profesionalisme dan keselamatan berkendara.</p>
         </div>
 
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=180&fit=crop"
+          <img src="Website/driver/driver2.png"
             alt="Pelatihan Driver Pemula Komunitas" class="service-image">
-          <h3>Pelatihan Driver Pemula Komunitas</h3>
-          <p>Program pelatihan mengemudi dasar untuk masyarakat umum dengan harga terjangkau.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=180&fit=crop"
-            alt="Advanced Driving Course Eksekutif" class="service-image">
           <h3>Advanced Driving Course Eksekutif</h3>
           <p>Pelatihan mengemudi lanjutan untuk eksekutif dan VIP dengan fokus pada keamanan dan kenyamanan.</p>
         </div>
+
+        <div class="service-card">
+          <img src="Website/driver/driver1.png"
+            alt="Pelatihan Driver Pemula Komunitas" class="service-image">
+          <h3>Pelatihan Mengemudi Privat</h3>
+          <p>Instruktur privat kami melatih Anda memakai mobil sendiri. Cepat mahir, nyaman, dan percaya diri di jalan.</p>
+       </div>
+
+       
 
       </div>
     </div>
@@ -151,7 +127,7 @@
       <h2 style="color:#1565c0; text-align:center; font-size:2.5rem; margin-bottom:1rem;">Klien yang Pernah Dilayani</h2>
       <p style="text-align:center; font-size:1.1rem; color:#666; margin-bottom:3rem;">Dipercaya oleh perusahaan dan institusi ternama</p>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center;">
+      <!-- <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center;">
         <div style="text-align:center;">
           <img src="Website/images/mandiri.jpeg" alt="Bank Mandiri" style="max-width:100px;">
           <p style="margin-top:10px; font-size:0.95rem; color:#333;">Bank Mandiri</p>
@@ -176,7 +152,7 @@
           <img src="Website/images/astra.jpeg" alt="Astra International" style="max-width:100px;">
           <p style="margin-top:10px; font-size:0.95rem; color:#333;">Astra International</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
   <!-- SLIDE 7: Form Umpan Balik Pelanggan -->
@@ -189,7 +165,7 @@
         Kami mengharapkan ulasan dari anda
       </p>
 
-        <form action="https://script.google.com/macros/s/AKfycbwJrh-8PkI90ta7PoKs_TyTQxa3jvAZCQrVjS8FHC88NVzz-2nYyw1dvRAWNIAX3aByxw/exec" method="POST" style="background:#f9fff9; padding:30px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.06);">
+      <form action="https://script.google.com/macros/s/AKfycbwJrh-8PkI90ta7PoKs_TyTQxa3jvAZCQrVjS8FHC88NVzz-2nYyw1dvRAWNIAX3aByxw/exec" method="POST" style="background:#f9fff9; padding:30px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.06);">
 
         <div class="form-group" style="margin-bottom:20px;">
           <label for="nama" style="display:block; font-weight:500; margin-bottom:8px;">Nama Anda</label>
@@ -277,22 +253,22 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="section" style="background:#1565c0; color:#fff; text-align:center; padding:80px 0;">
+  <section class="section" style="background:linear-gradient(135deg, #02a85a 0%, #02a85a 100%);; color:#fff; text-align:center; padding:80px 0;">
     <div class="container">
       <h2 style="font-size:2.5rem; margin-bottom:1rem; color:#fff;">Siap Meningkatkan Keterampilan Mengemudi Anda?</h2>
       <p style="font-size:1.2rem; margin-bottom:2rem; color:#90caf9;">Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran terbaik!</p>
       <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
-        <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="https://wa.me/6282328085554" target="_blank" style="background:#42a5f5; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           📱 WhatsApp Konsultasi
         </a>
-        <a href="tel:+6281234567890" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #42a5f5; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="tel:+6282328085554" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #42a5f5; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           📞 Call Now
         </a>
       </div>
     </div>
   </section>
 
-  <?php include 'Footer.php'; ?>
+  <?= $this->endSection() ?>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -331,7 +307,7 @@
       });
     });
   </script>
-      <script src="Website/js/scripts.js"></script>
+  <script src="Website/js/scripts.js"></script>
 </body>
 
 </html>

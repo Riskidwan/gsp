@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="id">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT. Gemilang Sapta Perdana</title>
+<?= $this->extend('website\website') ?> 
+   <?= $this->section('content') ?>
     <style>
         * {
             margin: 0;
@@ -49,18 +45,24 @@
 
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            margin-top: 40px;
         }
 
         .card {
             background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card.empty {
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: italic;
+            color: #777;
         }
 
         .card:hover {
@@ -135,11 +137,11 @@
         }
 
         .requirements ul {
-            list-style: none;
-            padding-left: 0;
+            padding-left: 20px;
         }
 
         .requirements li {
+            list-style: none;
             padding: 5px 0;
             padding-left: 20px;
             position: relative;
@@ -222,173 +224,92 @@
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
+
+
+   
     <!-- Loker Section -->
     <br>
     <section id="loker" class="section">
         <div class="container">
             <h2 class="section-title">Lowongan Kerja Terbaru</h2>
             <div class="card-grid">
-                <!-- Security Officer -->
-                   <div class="card">
-        <div class="urgent-badge">Urgent</div>
-        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=200&fit=crop" alt="Factory Production">
-        <div class="card-content">
-            <h3>Operator Produksi - PT INKOM</h3>
-            <div class="salary-range">Gaji Kompetitif + Tunjangan</div>
-            <p class="job-description">Bertugas mengoperasikan mesin produksi dan memastikan proses produksi berjalan dengan lancar. Bertanggung jawab dalam menjaga kualitas produk sesuai standar perusahaan.</p>
+                <?php foreach ($loker as $item): ?>
+                    <div class="card">
+                        <img src="<?= base_url('uploads/' . $item['gambar']) ?>"
+                            alt="<?= esc($item['judul']) ?>"
+                            style="width:100%; height:200px; object-fit:cover; border-radius: 8px;">
 
-             <div class="job-details">
-                <div class="detail-item">
-                    <span class="detail-label">Lokasi</span>
-                    <span class="detail-value">PT Industri Komkar Indonesia</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Tipe Kerja</span>
-                    <span class="detail-value">Full Time</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Jam Kerja</span>
-                    <span class="detail-value">Shift</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Pengalaman</span>
-                    <span class="detail-value">Fresh Graduate Welcome</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Pendidikan</span>
-                    <span class="detail-value">SMA/SMK/MA Sederajat</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Gender</span>
-                    <span class="detail-value">Laki-laki / Perempuan</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Kesehatan Mata</span>
-                    <span class="detail-value">Tidak buta warna & tidak minus</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Tinggi Badan</span>
-                    <span class="detail-value">L: 150cm, P: 145cm</span>
-                </div>
-            </div>
 
-            <div class="requirements">
-                <h4>Persyaratan Umum:</h4>
-                <ul>
-                   <li>Surat lamaran pekerjaan</li>
-                    <li>CV/Daftar riwayat hidup</li>
-                    <li>Pas foto 4x6 (2 lembar)</li>
-                    <li>Fotocopy KTP & Kartu Keluarga</li>
-                    <li>Fotocopy SKCK</li>
-                    <li>Fotocopy Ijazah/SKL</li>
-                    <li>Surat keterangan sehat dari IHC Klinik GSP</li>
-                    <li>Sertifikat pendukung lainnya</li>
-                </ul>
-            </div>
+                        <div class="card-content">
+                            <h3><?= esc($item['judul']) ?> - <?= esc($item['perusahaan']) ?></h3>
+                            <!-- <div class="salary-range"><?= esc($item['gaji']) ?></div> -->
+                            <p class="job-description"><?= esc($item['deskripsi']) ?></p>
 
-            
-
-            <a href="/inputloker" class="apply-btn">Lamar Sekarang</a>
-        </div>
-    </div>
-
-                <!-- Cleaning Service -->
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=180&fit=crop" alt="Cleaning Service">
-                    <div class="card-content">
-                        <h3>Cleaning Service - Semarang</h3>
-                        <div class="salary-range">Rp 3.200.000 - Rp 4.000.000</div>
-                        <p class="job-description">Menjaga kebersihan area kantor dan fasilitas umum dengan standar tinggi. Memastikan lingkungan kerja yang bersih dan nyaman.</p>
-
-                        <div class="job-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Lokasi</span>
-                                <span class="detail-value">Semarang Tengah</span>
+                            <div class="job-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Lokasi</span>
+                                    <span class="detail-value"><?= esc($item['lokasi']) ?></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Tipe Kerja</span>
+                                    <span class="detail-value"><?= esc($item['tipe_kerja']) ?></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Jam Kerja</span>
+                                    <span class="detail-value"><?= esc($item['jam_kerja']) ?></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Pengalaman</span>
+                                    <span class="detail-value"><?= esc($item['pengalaman']) ?></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Pendidikan</span>
+                                    <span class="detail-value"><?= esc($item['pendidikan']) ?></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Gender</span>
+                                    <span class="detail-value"><?= esc($item['gender']) ?></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Kesehatan Mata</span>
+                                    <span class="detail-value"><?= esc($item['kesehatan_mata']) ?></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Tinggi Badan</span>
+                                    <span class="detail-value"><?= esc($item['tinggi_badan']) ?></span>
+                                </div>
                             </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Tipe Kerja</span>
-                                <span class="detail-value">Full Time</span>
+
+                            <div class="requirements">
+                                <h4>Persyaratan Umum:</h4>
+                                <ul class="checklist">
+                                    <?php
+                                    $persyaratan_list = explode("\n", $item['persyaratan']);
+                                    foreach ($persyaratan_list as $persyaratan) {
+                                        $persyaratan = trim($persyaratan);
+                                        if (!empty($persyaratan)) {
+                                            echo '<li>' . esc($persyaratan) . '</li>';
+                                        }
+                                    }
+                                    ?>
+                                </ul>
                             </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Jam Kerja</span>
-                                <span class="detail-value">08:00 - 17:00</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Pengalaman</span>
-                                <span class="detail-value">Fresh Graduate</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Pendidikan</span>
-                                <span class="detail-value">SMP/SMA</span>
-                            </div>
+
+                            <a href="<?= base_url('inputloker') ?>" class="apply-btn">Lamar Sekarang</a>
                         </div>
-
-                        <div class="requirements">
-                            <h4>Persyaratan:</h4>
-                            <ul>
-                                <li>Pria/Wanita, usia 20-35 tahun</li>
-                                <li>Sehat jasmani dan rohani</li>
-                                <li>Rajin dan teliti dalam bekerja</li>
-                                <li>Mampu menggunakan peralatan cleaning</li>
-                                <li>Dapat bekerja sama dalam tim</li>
-                                <li>Berpenampilan rapi dan sopan</li>
-                            </ul>
-                        </div>
-
-                        <a href="/inputloker" class="apply-btn">Lamar Sekarang</a>
                     </div>
-                </div>
+                <?php endforeach; ?>
 
-                <!-- Driver -->
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=180&fit=crop" alt="Driver">
-                    <div class="card-content">
-                        <h3>Driver Operasional - Surabaya</h3>
-                        <div class="salary-range">Rp 4.000.000 - Rp 5.000.000</div>
-                        <p class="job-description">Mengantar dan menjemput sesuai kebutuhan operasional perusahaan. Memastikan perjalanan yang aman dan tepat waktu.</p>
-
-                        <div class="job-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Lokasi</span>
-                                <span class="detail-value">Surabaya Timur</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Tipe Kerja</span>
-                                <span class="detail-value">Full Time</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Jam Kerja</span>
-                                <span class="detail-value">07:00 - 16:00</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Pengalaman</span>
-                                <span class="detail-value">Min. 2 tahun</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Pendidikan</span>
-                                <span class="detail-value">SMA/SMK</span>
-                            </div>
-                        </div>
-
-                        <div class="requirements">
-                            <h4>Persyaratan:</h4>
-                            <ul>
-                                <li>Pria, usia 25-45 tahun</li>
-                                <li>Memiliki SIM A yang masih berlaku</li>
-                                <li>Pengalaman mengendarai mobil min. 2 tahun</li>
-                                <li>Mengenal rute Surabaya dan sekitarnya</li>
-                                <li>Tidak memiliki catatan pelanggaran lalu lintas</li>
-                                <li>Komunikatif dan ramah</li>
-                            </ul>
-                        </div>
-                        <a href="/inputloker" class="apply-btn">Lamar Sekarang</a>
+                <?php for ($i = count($loker); $i < 3; $i++): ?>
+                    <div class="card empty">
+                        <p>Belum ada lowongan</p>
                     </div>
-                </div>
+                <?php endfor; ?>
             </div>
-        </div>
+
+
     </section>
-    <?php include 'Footer.php'; ?>
+   <?= $this->endSection() ?>
 
     <script src="Website/js/scripts.js"></script>
 </body>

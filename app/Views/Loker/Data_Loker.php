@@ -5,14 +5,14 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Data Lamaran Masuk</h3>
-                <p class="text-subtitle text-muted">Daftar lamaran yang masuk, bisa dihapus atau ditandai sudah dipanggil.</p>
+                <h3>Data Lowongan Kerja</h3>
+                <p class="text-subtitle text-muted">Daftar lowongan yang tersedia di website.</p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Data Lamaran</li>
+                        <li class="breadcrumb-item active" aria-current="page">Data Lowongan</li>
                     </ol>
                 </nav>
             </div>
@@ -22,81 +22,52 @@
     <section class="section">
         <div class="card">
             <div class="card-header">
-
-                <h5 class="card-title">
-                    Daftar Lamaran Masuk
-                </h5>
-
+                <h5 class="card-title">Daftar Lowongan</h5>
             </div>
 
-
             <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div id="custom-selector"></div>
-
-                    <div id="custom-search"></div>
+                <div class="row mb-2">
+                    <div class="col-md-6 d-flex align-items-center" id="custom-selector"></div>
+                    <div class="col-md-6 d-flex justify-content-end" id="custom-search"></div>
                 </div>
-                <form method="get" action="<?= base_url('data_loker') ?>">
-                    <label>Pilih Posisi:</label>
-                    <select name="position" onchange="this.form.submit()">
-                        <option value="">-- Semua Posisi --</option>
-                        <?php foreach ($positions as $p): ?>
-                            <option value="<?= $p['position'] ?>"
-                                <?= (isset($_GET['position']) && $_GET['position'] == $p['position']) ? 'selected' : '' ?>>
-                                <?= $p['position'] ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                </form>
+
                 <table class="table table-striped" id="table1">
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Lengkap</th>
-                            <th>Email</th>
-                            <th>Telepon</th>
-                            <th>Posisi</th>
-                            <th>Alamat</th>
-                            <th>CV</th>
+                            <th>Judul</th>
+                            <th>Perusahaan</th>
+                            <th>Lokasi</th>
+                            <!-- <th>Gaji</th> -->
+                            <th>Tipe Kerja</th>
                             <th>Pengalaman</th>
-                            <th>Tanggal</th>
+                            <th>Pendidikan</th>
+                            <th>Gambar</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $no = 1; ?>
-                        <?php foreach ($lamaran as $row): ?>
+                        <?php $no = 1;
+                        foreach ($lowongan as $row): ?>
                             <tr>
                                 <td><?= $no++ ?></td>
-                                <td><?= esc($row['nama_lengkap']) ?></td>
-                                <td><?= esc($row['email']) ?></td>
-                                <td><?= esc($row['phone']) ?></td>
-                                <td><?= esc($row['position']) ?></td>
-
-                                <td><?= esc($row['address']) ?></td>
+                                <td><?= esc($row['judul']) ?></td>
+                                <td><?= esc($row['perusahaan']) ?></td>
+                                <td><?= esc($row['lokasi']) ?></td>
+                                <!-- <td><?= esc($row['gaji']) ?></td> -->
+                                <td><?= esc($row['tipe_kerja']) ?></td>
+                                <td><?= esc($row['pengalaman']) ?></td>
+                                <td><?= esc($row['pendidikan']) ?></td>
                                 <td>
-                                    <?php foreach (explode(',', $row['cv_file']) as $file): ?>
-                                        <a href="<?= base_url('uploads/cv/' . $file) ?>" target="_blank">
-                                            <?= esc($file) ?>
-                                        </a><br>
-                                    <?php endforeach; ?>
-
+                                    <?php if ($row['gambar']): ?>
+                                        <img src="<?= base_url('uploads/' . $row['gambar']) ?>" width="80">
+                                    <?php else: ?>
+                                        <em>Tidak ada</em>
+                                    <?php endif; ?>
                                 </td>
-                                <td><?= esc($row['experience']) ?></td>
-                                <td><?= $row['created_at'] ?></td>
-                                <td><?= esc($row['status']) ?></td>
                                 <td>
-                                    <!-- Tombol tandai sudah dipanggil -->
-                                    <a href="<?= base_url('dashboard/tandai/' . $row['id']) ?>" class="btn btn-sm btn-success"
-                                        onclick="return confirm('Tandai lamaran ini sudah dipanggil?')">
-                                        Tandai
-                                    </a>
-
-                                    <!-- Tombol hapus -->
-                                    <a href="<?= base_url('dashboard/hapus/' . $row['id']) ?>" class="btn btn-sm btn-danger"
-                                        onclick="return confirm('Yakin ingin menghapus lamaran ini?')">
-                                        Hapus
-                                    </a>
+                                    <a href="<?= base_url('loker/edit/' . $row['id']) ?>" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="<?= base_url('loker/delete/' . $row['id']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus?')">Hapus</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -114,7 +85,7 @@
         </div>
         <div class="float-end">
             <p>Crafted with <span class="text-danger"><i class="bi bi-heart-fill icon-mid"></i></span>
-                by <a href="https://saugi.me">PT GSP</a></p>
+                by <a href="#">PT GSP</a></p>
         </div>
     </div>
 </footer>

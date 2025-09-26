@@ -65,14 +65,11 @@ public function molding_operator()
     return view('website/LPK/Molding_Operator');
 }
 
-    public function loker()
-    {
-        return view('website/loker');
-    }
-    public function berita()
-    {
-        return view('website/berita');
-    }
+  
+    // public function berita()
+    // {
+    //     return view('website/berita');
+    // }
     public function contact()
     {
         return view('website/contact');
@@ -81,9 +78,5 @@ public function molding_operator()
     {
         return view('website/berita_detail_award');
     }
-    // public function input()
-    // {
-    //     $data['position'] = $this->request->getGet('position');
-    //     return view('website/inputloker', $data);
-    // }
+
 }

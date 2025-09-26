@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT. Gemilang Sapta Perdana</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="<?= base_url('Website/css/main.css') ?>">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="<?= base_url('website/images/logo_baru.png'); ?>" type="image/x-icon">
+
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        .header {
+            background: #ffffff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        /* Navigasi */
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #2d3748;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            color: #3182ce;
+        }
+
+        /* Dropdown */
+        .dropdown-parent .arrow {
+            font-size: 0.7rem;
+            margin-left: 5px;
+        }
+
+        .dropdown-parent.active .dropdown-menu {
+            display: flex;
+            /* tampil saat diklik */
+        }
+
+
+        .dropdown-menu {
+            position: absolute;
+            top: 120%;
+            left: 0;
+            min-width: 180px;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            display: none;
+            flex-direction: column;
+            padding: 8px 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 16px;
+            color: #2d3748;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f1f5f9;
+            color: #3182ce;
+        }
+
+        .dropdown-parent:hover .dropdown-menu {
+            display: flex;
+        }
+
+        /* Mobile toggle */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 3px;
+            background: #2d3748;
+            border-radius: 2px;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: #fff;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 220px;
+                padding: 15px;
+                border-radius: 6px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <img src="website/images/logo_baru.png" alt="Logo GSP" class="logo-img" />
+                <span class="logo-text">PT GEMILANG SAPTA PERDANA</span>
+            </a>
+
+
+            <!-- Navigasi -->
+            <nav>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about">Tentang Kami</a></li>
+                    <li class="dropdown-parent">
+                       <a href="#" class="menu-link" onclick="return false;">LAYANAN&#9662;</a>
+                        <div class="dropdown-menu">
+                            <a href="services_security">Security Services</a>
+                            <a href="cleaning_service">Cleaning Service</a>
+                            <a href="gardening">Gardening</a>
+                            <a href="receptionist">Receptionist Service</a>
+                            <a href="driver">Driver</a>
+                            <a href="labor_supply">Labor Supply</a>
+                        </div>
+                    </li>
+                    <li class="dropdown-parent">
+                        <a href="#" class="menu-link" onclick="return false;">LPK&#9662;</a>
+
+                        <div class="dropdown-menu">
+                            <a href="/rubber_seal">Rubber Seal</a>
+                            <a href="/wiring_harness">Wiring Harness</a>
+                            <a href="/sewing">Sewing</a>
+                            <a href="/packing">Packing</a>
+                            <a href="/molding_operator">Molding Operator</a>
+                        </div>
+                    </li>
+                    <li><a href="loker">Loker</a></li>
+                    <li><a href="berita">Berita</a></li>
+                    <li><a href="contact">Kontak</a></li>
+                    <li><a href="<?= base_url('login') ?>">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Konten lain -->
+    <script>
+        const mobileToggle = document.getElementById("mobileToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        // Toggle menu mobile
+        mobileToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+        });
+
+        // Dropdown toggle (klik)
+        const dropdownParents = document.querySelectorAll(".dropdown-parent > a");
+
+        dropdownParents.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault(); // biar tidak reload ke "#"
+                const parent = link.parentElement;
+
+                // Tutup dropdown lain
+                document.querySelectorAll(".dropdown-parent").forEach(el => {
+                    if (el !== parent) {
+                        el.classList.remove("active");
+                    }
+                });
+
+                // Toggle dropdown yang diklik
+                parent.classList.toggle("active");
+            });
+        });
+
+        // Klik di luar menu untuk menutup
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".dropdown-parent")) {
+                document.querySelectorAll(".dropdown-parent").forEach(el => {
+                    el.classList.remove("active");
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
