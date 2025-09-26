@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="id">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT. Gemilang Sapta Perdana</title>
     <link rel="stylesheet" href="Website/css/keunggulan.css">
-</head>
-<?php include 'header.php'; ?>
+<?= $this->extend('website\website') ?>
+
+     <?= $this->section('content') ?>
 <br>
 <body>
     <!-- Keunggulan Section -->
@@ -39,4 +34,4 @@
 </body>
 
 </html>
-<?php include 'Footer.php'; ?>
+ <?= $this->endSection() ?>

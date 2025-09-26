@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="id">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Wiring Harness- PT Gemilang Sapta Perdana</title>
   <link rel="stylesheet" href="Website/css/services.css" />
-</head>
 
 <body>
-  <?php echo $this->include('website/header'); ?>
+  <?= $this->extend('website\website') ?>
+
+  <?= $this->section('content') ?>
 <br>
   <!-- SLIDE 1: Hero Section -->
   <section class="hero" style="background: linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
@@ -20,7 +15,7 @@
         <p style="font-size:1.13rem; color:#e3f2fd; margin-bottom:1.5rem; max-width:500px;">
            Program pelatihan Wiring Harness difokuskan pada keahlian perakitan kabel kendaraan (automotive harness) yang memenuhi standar otomotif dan pabrik perakitan.
         </p>
-        <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
+        <a href="https://wa.me/6282328085554" target="_blank" style="background:#42a5f5; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
       </div>
       <div style="flex:1 1 420px; min-width:280px; text-align:center;">
         <img src="Website/images/wiring 1.png" alt="Cleaning Service" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
@@ -128,47 +123,28 @@
       <h2 style="color:#1565c0; text-align:center; font-size:2.5rem; margin-bottom:1rem;">Klien yang Pernah Dilayani</h2>
       <p style="text-align:center; font-size:1.1rem; color:#666; margin-bottom:3rem;">Dipercaya oleh perusahaan dan institusi ternama</p>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center;">
+       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center;">
         <div style="text-align:center;">
-          <img src="Website/images/pt ab.png" alt="Aneka Bonecom" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Aneka Bonecom Component</p>
+          <img src="Website/images/pt Inkom.png" alt="Aneka Bonecom" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Industri Komkar Indonesia</p>
         </div>
         <div style="text-align:center;">
           <img src="Website/images/pt casuarina.jpeg" alt="Casuarina" style="max-width:100px;">
           <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Casuarina HarnessIndo</p>
         </div>
         <div style="text-align:center;">
-          <img src="Website/images/vivere.png" alt="vivere" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">VI VE RE GROUP</p>
-        </div>
-        <div style="text-align:center;">
-          <img src="Website/images/ggs.png" alt="ggs" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">G.G.S Interior, Manufacturing & MEP</p>
-        </div>
-        <div style="text-align:center;">
-          <img src="Website/images/pt mpg.png" alt="mega" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Mega Putra Garment</p>
-        </div>
-        <div style="text-align:center;">
-          <img src="Website/images/sakura.png" alt="sakura" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Sakura Seal Manufaktur Indonesia</p>
-        </div>
-        <div style="text-align:center;">
-          <img src="Website/images/tamo.png" alt="tamo" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Tamo Steel Manufacturing Indonesia</p>
-        </div>
-        <div style="text-align:center;">
-          <img src="Website/images/jafpa.png" alt="jafpa" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">JAFPA PT Ciomas Adisatwa</p>
-        </div>
-        <div style="text-align:center;">
-          <img src="Website/images/aneka karet.png" alt="karet" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Aneka Komponen Karet Utama (Component Rubbers Parts Otomotif)</p>
+          <img src="Website/images/PT Mega Putra Garmen.png" alt="vivere" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Mega Putra Garmen</p>
         </div>
         <div style="text-align:center;">
           <img src="Website/images/pt wisnu.png" alt="karet" style="max-width:100px;">
           <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Wisnu Cakra Perdana</p>
         </div>
+        <div style="text-align:center;">
+          <img src="Website/images/PT Sakura Seal Manufaktur Indonesia.png" alt="karet" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Sakura Seal Manufaktur Indonesia</p>
+        </div>
+       
       </div>
     </div>
   </section>
@@ -289,17 +265,17 @@
       <h2 style="font-size:2.5rem; margin-bottom:1rem; color:#fff;">Butuh Info Pemagangan?</h2>
       <p style="font-size:1.2rem; margin-bottom:2rem; color:#bbdefb;">Hubungi kami sekarang!</p>
       <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
-        <a href="https://wa.me/6281234567890" target="_blank" style="background:#42a5f5; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="https://wa.me/6282328085554" target="_blank" style="background:#42a5f5; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           🧹 WhatsApp Pendaftaran
         </a>
-        <a href="tel:+6281234567890" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #42a5f5; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="tel:+6282328085554" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #42a5f5; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           📞 Call Now
         </a>
       </div>
     </div>
   </section>
 
-  <?php echo $this->include('website/Footer'); ?>
+ <?= $this->endSection() ?>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {

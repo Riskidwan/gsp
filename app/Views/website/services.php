@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="id">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layanan Kami</title>
     <link rel="stylesheet" href="website/css/services.css">
    
-</head>
+
 
 <body>
-    <?php include 'header.php'; ?>
+<?= $this->extend('website\website') ?>
+
+     <?= $this->section('content') ?>
     <br>
     <section id="services" class="section">
         <div class="container">
@@ -85,4 +81,4 @@
 </body>
 
 </html>
- <?php include 'Footer.php'; ?>
+ <?= $this->endSection() ?>

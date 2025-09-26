@@ -13,6 +13,7 @@ use CodeIgniter\Filters\PageCache;
 use CodeIgniter\Filters\PerformanceMetrics;
 use CodeIgniter\Filters\SecureHeaders;
 
+
 class Filters extends BaseFilters
 {
     /**
@@ -34,6 +35,7 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        'auth'          => \App\Filters\Auth::class,
     ];
 
     /**
@@ -69,11 +71,12 @@ class Filters extends BaseFilters
      */
     public array $globals = [
         'before' => [
-            // 'honeypot',
+            'honeypot',
             // 'csrf',
             // 'invalidchars',
         ],
         'after' => [
+            'toolbar',
             // 'honeypot',
             // 'secureheaders',
         ],
@@ -103,5 +106,30 @@ class Filters extends BaseFilters
      *
      * @var array<string, array<string, list<string>>>
      */
-    public array $filters = [];
+   public array $filters = [
+        'auth' => [
+            'before' => [
+                // 'dashboard',
+                'dashboard*',
+                'admin/*',
+                'data_*',
+                'input_*',
+                'berita/store',
+                'berita/update/*',
+                'berita/delete/*',
+                'berita/edit/*',
+                'loker/store',
+                'loker/update/*',
+                'loker/delete/*',
+                'loker/edit/*',
+                'breaking-news/*',
+                'breaking_news/*',
+                'akun',
+                'akun/*',
+                'check-slug',
+                'store',
+                'update/*',
+            ]
+        ]
+    ];
 }

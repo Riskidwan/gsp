@@ -1,25 +1,16 @@
  <!DOCTYPE html>
 
- <html lang="id">
 
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>PT. Gemilang Sapta Perdana</title>
-     <link rel="stylesheet" href="website/css/main.css">
-     <!-- <script src="assets/js/scripts.js"></script> -->
-     <link rel="stylesheet" href="website/css/services.css">
-     <link rel="stylesheet" href="website/css/keunggulan.css">
- </head>
 
  <body>
+     <?= $this->extend('website\website') ?>
 
-     <?php include 'header.php'; ?>
+     <?= $this->section('content') ?>
      <br>
      <br>
-     <section id="home" class="hero" style="background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('website/images/wp2.jpeg');">
+    <section id="home" class="hero" style="background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('<?= base_url('website/images/bg_gsp1.png') ?>');">
          <div class="hero-content">
-             <h1 class="fade-in-up">PT. GEMILANG SAPTA PERDANA</h1>
+             <h1 class="fade-in-up">PT GEMILANG SAPTA PERDANA</h1>
              <p class="hero-subtitle fade-in-up">Facility Services Company</p>
              <div class="hero-tagline fade-in-up">
                  Menjadi solusi tepat terhadap penyediaan tenaga kerja yang kompeten dan memudahkan Anda menunjang segala
@@ -34,35 +25,35 @@
              <div class="about-content" style="max-width: 1000px; margin: 0 auto; color: #444; display: flex; flex-wrap: wrap; gap: 32px; align-items: center;">
                  <div style="flex: 1 1 380px; min-width: 280px;">
                      <p style="font-size: 1.15rem; line-height: 1.8;">
-                         <strong>PT. Gemilang Sapta Perdana (GSP)</strong> adalah perusahaan jasa fasilitas terintegrasi yang telah berdiri sejak 2010. Kami melayani kebutuhan tenaga kerja profesional di bidang keamanan, kebersihan, transportasi, receptionist, gardening, dan manajemen fasilitas untuk perusahaan nasional maupun multinasional di seluruh Indonesia.<br><br>
-                         Dengan pengalaman lebih dari 15 tahun, GSP dikenal karena komitmen pada kualitas, inovasi layanan, dan kepuasan pelanggan. Didukung lebih dari 1200 karyawan terlatih, kami siap menjadi mitra andalan bisnis Anda.
+                         <strong>PT Gemilang Sapta Perdana (GSP)</strong> adalah perusahaan jasa fasilitas terintegrasi yang telah berdiri sejak 2019. Kami melayani kebutuhan tenaga kerja profesional di bidang keamanan, kebersihan, transportasi, receptionist, gardening, dan manajemen fasilitas untuk perusahaan nasional maupun multinasional di seluruh Indonesia.<br><br>
+                         Dengan pengalaman lebih dari 6 tahun, GSP dikenal karena komitmen pada kualitas, inovasi layanan, dan kepuasan pelanggan. Didukung lebih dari 2000 karyawan terlatih, kami siap menjadi mitra andalan bisnis Anda.
                      </p>
                      <div style="text-align:center; margin-top:32px;">
-                         <a href="https://wa.me/6281234567890" target="_blank" style="display:inline-block; background:#25d366; color:#fff; font-size:1.1rem; font-weight:600; padding: 0.9rem 2.2rem; border-radius: 32px; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.08); transition:background 0.2s;">
+                         <a href="https://wa.me/6282328085554" target="_blank" style="display:inline-block; background:#25d366; color:#fff; font-size:1.1rem; font-weight:600; padding: 0.9rem 2.2rem; border-radius: 32px; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.08); transition:background 0.2s;">
                              Hubungi Kami Sekarang
                          </a>
                      </div>
                  </div>
                  <div style="flex: 1 1 320px; min-width: 220px; text-align: center;">
-                     <img src="website/images/logo-gsp.jpg" alt="Logo PT Gemilang Sapta Perdana" style="max-width: 260px; width: 100%; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 12px;">
+                     <img src="<?= base_url('website/images/logo_gsp.png') ?>" alt="Logo PT Gemilang Sapta Perdana" style="max-width: 260px; width: 100%; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 12px;">
                  </div>
              </div>
              <div class="about-stats" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; margin-top: 32px;">
                  <div style="flex: 1 1 180px; min-width: 180px; background: #f7fafd; border-radius: 12px; text-align: center; padding: 1.5rem 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
-                     <div style="font-size: 2rem; color: #1a73e8; font-weight: bold;">15+</div>
+                     <div style="font-size: 2rem; color: #1a73e8; font-weight: bold;">6+</div>
                      <div style="font-size: 1rem; color: #555;">Tahun Pengalaman</div>
                  </div>
                  <div style="flex: 1 1 180px; min-width: 180px; background: #f7fafd; border-radius: 12px; text-align: center; padding: 1.5rem 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
-                     <div style="font-size: 2rem; color: #1a73e8; font-weight: bold;">1200+</div>
+                     <div style="font-size: 2rem; color: #1a73e8; font-weight: bold;">2000+</div>
                      <div style="font-size: 1rem; color: #555;">Karyawan Profesional</div>
                  </div>
                  <div style="flex: 1 1 180px; min-width: 180px; background: #f7fafd; border-radius: 12px; text-align: center; padding: 1.5rem 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
-                     <div style="font-size: 2rem; color: #1a73e8; font-weight: bold;">100+</div>
-                     <div style="font-size: 1rem; color: #555;">Klien Nasional & Multinasional</div>
+                     <div style="font-size: 2rem; color: #1a73e8; font-weight: bold;">20+</div>
+                     <div style="font-size: 1rem; color: #555;">Klien Lokal & Nasional</div>
                  </div>
                  <div style="flex: 1 1 180px; min-width: 180px; background: #f7fafd; border-radius: 12px; text-align: center; padding: 1.5rem 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
-                     <div style="font-size: 2rem; color: #1a73e8; font-weight: bold;">ISO 9001 & 45001</div>
-                     <div style="font-size: 1rem; color: #555;">Standar Mutu & K3</div>
+                     <div style="font-size: 2rem; color: #1a73e8; font-weight: bold;">ISO 9001,3700, 370001 & 4500</div>
+                     <div style="font-size: 1rem; color: #555;">Standar Mutu, K3  & anti suap</div>
                  </div>
              </div>
              <div style="text-align:center; margin-top:32px;">
@@ -118,7 +109,7 @@
 
 
 
-     <section id="keunggulan" class="section advantages">
+     <!-- <section id="keunggulan" class="section advantages">
          <div class="container">
              <h2 class="section-title">Keunggulan Kami</h2>
              <div class="advantages-grid">
@@ -141,62 +132,70 @@
                  </div>
              </div>
          </div>
-     </section>
+     </section> -->
 
-     <section id="services" class="section">
-         <div class="container">
-             <h2 class="section-title">Layanan Kami</h2>
-             <div class="services-grid">
-                 <div class="service-card">
-                     <img src="website/images/satpam1.jpeg"
-                         alt="Security Services" class="service-image">
-                     <h3>Security Services</h3>
-                     <p>Menyediakan jasa pengamanan yang profesional dalam melindungi karyawan, gedung, dan lingkungan para mitra bisnis selama 24 jam.</p>
-                     <a class="detail-btn" href="services_security">Lihat Detail</a>
-                 </div>
+    <section id="services" class="section">
+    <div class="container">
+        <h2 class="section-title">Layanan Kami</h2>
+        <div class="services-grid">
 
-                 <div class="service-card">
-                     <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=180&fit=crop"
-                         alt="Cleaning Service" class="service-image">
-                     <h3>Cleaning Service</h3>
-                     <p>Menyediakan jasa layanan kebersihan terbaik dalam menciptakan lingkungan yang bersih dan nyaman untuk seluruh mitra bisnis.</p>
-                     <a class="detail-btn" href="cleaning_service">Lihat Detail</a>
-                 </div>
+            <div class="service-card">
+                <img src="website/images/satpam1.jpeg" alt="Security Services" class="service-image">
+                <div class="service-content">
+                    <h3>Security Services</h3>
+                    <p>Menyediakan jasa pengamanan profesional untuk melindungi karyawan, gedung, dan lingkungan mitra bisnis selama 24 jam.</p>
+                    <a class="detail-btn" href="services_security">Lihat Detail</a>
+                </div>
+            </div>
 
-                 <div class="service-card">
-                     <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=180&fit=crop"
-                         alt="Gardening Service" class="service-image">
-                     <h3>Gardening</h3>
-                     <p>Menyediakan jasa perawatan tanaman dan taman agar selalu terlihat ASRI dan memberikan suasana yang nyaman.</p>
-                     <a class="detail-btn" href="gardening">Lihat Detail</a>
-                 </div>
+            <div class="service-card">
+                <img src="Website/cleaning/cleaning2.jpg" alt="Cleaning Service" class="service-image">
+                <div class="service-content">
+                    <h3>Cleaning Service</h3>
+                    <p>Menyediakan layanan kebersihan terbaik untuk menciptakan lingkungan yang bersih dan nyaman bagi seluruh mitra bisnis.</p>
+                    <a class="detail-btn" href="cleaning_service">Lihat Detail</a>
+                </div>
+            </div>
 
-                 <div class="service-card">
-                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=180&fit=crop"
-                         alt="Receptionist Service" class="service-image">
-                     <h3>Receptionist Service</h3>
-                     <p>Menyediakan jasa receptionist yang dilatih untuk memberi pelayanan informasi yang prima, ramah, dan teliti sehingga alur komunikasi di lokasi mitra bisnis berjalan dengan baik.</p>
-                     <a class="detail-btn" href="receptionist">Lihat Detail</a>
-                 </div>
+            <div class="service-card">
+                <img src="Website/gardener/gardener3.jpg" alt="Gardening Service" class="service-image">
+                <div class="service-content">
+                    <h3>Gardening</h3>
+                    <p>Menyediakan jasa perawatan tanaman dan taman agar selalu terlihat ASRI dan memberikan suasana yang nyaman.</p>
+                    <a class="detail-btn" href="gardening">Lihat Detail</a>
+                </div>
+            </div>
 
-                 <div class="service-card">
-                     <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=180&fit=crop"
-                         alt="Driver Service" class="service-image">
-                     <h3>Driver</h3>
-                     <p>Menyediakan jasa driver yang mengutamakan ketepatan waktu, keselamatan, dan kenyamanan perjalanan bagi mitra bisnis.</p>
-                     <a class="detail-btn" href="driver">Lihat Detail</a>
-                 </div>
+            <div class="service-card">
+                <img src="Website/receptionist/receptionist1.jpg" alt="Receptionist Service" class="service-image">
+                <div class="service-content">
+                    <h3>Receptionist Service</h3>
+                    <p>Menyediakan receptionist terlatih untuk memberi pelayanan informasi yang prima, ramah, dan teliti.</p>
+                    <a class="detail-btn" href="receptionist">Lihat Detail</a>
+                </div>
+            </div>
 
-                 <div class="service-card">
-                     <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=180&fit=crop"
-                         alt="Labor Supply Service" class="service-image">
-                     <h3>Labor Supply</h3>
-                     <p>Menyediakan jasa penyediaan tenaga kerja yang sesuai dengan standar operasional dan kriteria kebutuhan mitra bisnis.</p>
-                     <a class="detail-btn" href="labor_supply">Lihat Detail</a>
-                 </div>
-             </div>
-         </div>
-     </section>
+            <div class="service-card">
+                <img src="Website/driver/driver3.png" alt="Driver Service" class="service-image">
+                <div class="service-content">
+                    <h3>Driver</h3>
+                    <p>Menyediakan jasa driver yang mengutamakan ketepatan waktu, keselamatan, dan kenyamanan perjalanan bagi mitra bisnis.</p>
+                    <a class="detail-btn" href="driver">Lihat Detail</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="Website/Labor_supply/Labor Supply1.jpg" alt="Labor Supply Service" class="service-image">
+                <div class="service-content">
+                    <h3>Labor Supply</h3>
+                    <p>Menyediakan tenaga kerja yang sesuai dengan standar operasional dan kriteria kebutuhan mitra bisnis Anda.</p>
+                    <a class="detail-btn" href="labor_supply">Lihat Detail</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
      <!-- conatct -->
 
@@ -224,7 +223,7 @@
                          <div class="contact-icon">🏢</div>
                          <div class="contact-details">
                              <div class="contact-label">Perusahaan</div>
-                             <div class="contact-value">PT. Gemilang Sapta Perdana</div>
+                             <div class="contact-value">PT Gemilang Sapta Perdana</div>
                          </div>
                      </div>
 
@@ -240,7 +239,7 @@
                          <div class="contact-icon">🤝</div>
                          <div class="contact-details">
                              <div class="contact-label">Mitra Strategis</div>
-                             <div class="contact-value">Balai Perluasan Kesempatan Kerja</div>
+                             <div class="contact-value">BKK di Pemalang</div>
                          </div>
                      </div>
 
@@ -248,7 +247,7 @@
                          <div class="contact-icon">⏰</div>
                          <div class="contact-details">
                              <div class="contact-label">Jam Operasional</div>
-                             <div class="contact-value">Senin - Jumat: 08:00 - 17:00<br>Sabtu: 08:00 - 12:00</div>
+                             <div class="contact-value">Senin - Jumat: 08:00 - 17:00<br></div>
                          </div>
                      </div>
                  </div>
@@ -264,7 +263,7 @@
 
                          <div class="form-group">
                              <label for="email">Email *</label>
-                            <input type="email" id="email" name="email"required placeholder="contoh@email.com">
+                             <input type="email" id="email" name="email" required placeholder="contoh@email.com">
                          </div>
 
                          <div class="form-group">
@@ -294,7 +293,7 @@
          <div class="modal-content">
              <div class="modal-header">
                  <h2 id="modalTitle"></h2>
-                 <button class="close" onclick="closeModal()">&times;</button>
+                 <!-- <button class="close" onclick="closeModal()">&times;</button> -->
              </div>
              <div class="modal-body" id="modalBody">
                  <!-- Content will be dynamically inserted here -->
@@ -306,8 +305,7 @@
  </body>
 
 
-
- <?php include 'Footer.php'; ?>
+ <?= $this->endSection() ?>
 
 
  <!-- JavaScript -->
@@ -351,4 +349,4 @@
  <script src="website/js/scripts.js"></script>
  </body>
 
- </html>g
+ </html>

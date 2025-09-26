@@ -1,188 +1,410 @@
-<!DOCTYPE html>
-<html lang="id">
+<?= $this->extend('website\website') ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berita Terkini</title>
-    <link rel="stylesheet" href="Website/css/berita.css">
-    <link rel="stylesheet" href="Website/css/main.css">
+<?= $this->section('content') ?>
 
-</head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-<body>
+<style>
+    /* General Styles */
+    .news-page {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        padding: 80px 0 20px 0; /* Tambahkan padding-top agar tidak tertutup header */
+    }
 
-    <?php include 'header.php'; ?>
-    <br>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Section Header */
+    .section-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #3498db, #2980b9);
+        border-radius: 2px;
+    }
+
+    /* Breaking News Ticker */
+    .breaking-news-wrapper {
+        margin-bottom: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .breaking-ticker {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        color: white;
+        padding: 12px 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+    }
+    
+    .breaking-ticker a {
+        color: white;
+        text-decoration: none;
+    }
+    .breaking-ticker a:hover {
+        text-decoration: underline;
+    }
+
+    .breaking-ticker::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        animation: shimmer 2s infinite;
+    }
+
+    .breaking-label {
+        background: linear-gradient(135deg, #f1c40f 0%, #f39c12 100%);
+        color: #2c3e50;
+        padding: 8px 16px;
+        margin-right: 20px;
+        font-weight: 700;
+        border-radius: 25px;
+        flex-shrink: 0;
+        font-size: 0.9rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .ticker-wrapper {
+        overflow: hidden;
+        flex: 1;
+        mask: linear-gradient(90deg, transparent, black 5%, black 95%, transparent);
+    }
+
+    .ticker-content {
+        display: inline-block;
+        white-space: nowrap;
+        animation: ticker 25s linear infinite;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+    .ticker-content span, .ticker-content a {
+        margin-right: 60px;
+        padding-right: 15px;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .ticker-content span:last-child, .ticker-content a:last-child {
+        border-right: none;
+    }
+
+    @keyframes ticker {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+
+    @keyframes shimmer {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
+
+    /* News List */
+    .news-list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+
+    .news-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: none;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .news-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .news-image-container {
+        width: 280px;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+    .news-card .card-img-top {
+        width: 100%;
+        height: 100%; /* Ubah agar gambar mengisi penuh container */
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .news-card:hover .card-img-top {
+        transform: scale(1.05);
+    }
+
+    .news-card .card-body {
+        padding: 25px 30px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .news-card .card-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .news-card .card-text {
+        color: #7f8c8d;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        flex-grow: 1;
+    }
+
+    .news-meta {
+        display: flex;
+        flex-wrap: wrap; /* Agar bisa turun ke bawah di layar kecil */
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-size: 0.85rem;
+        color: #95a5a6;
+    }
+
+    .news-meta i {
+        margin-right: 5px;
+    }
+
+    .btn-read-more {
+        background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+        border: none;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+        align-self: flex-start; /* Agar tombol tidak meregang */
+    }
+
+    .btn-read-more:hover {
+        background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
+        color: white;
+        transform: translateX(5px);
+    }
+
+    /* Load More Button */
+    .load-more-container {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .load-more-btn {
+        background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    }
+
+    .load-more-btn:hover {
+        background: linear-gradient(135deg, #229954 0%, #1e8449 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+    }
+
+    .load-more-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .section-title { font-size: 2.2rem; }
+        .breaking-label {
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            margin-right: 15px;
+        }
+        .news-card { flex-direction: column; }
+        .news-image-container { width: 100%; }
+        .news-card .card-img-top { height: 200px; }
+        .news-card .card-body { padding: 20px; }
+    }
+
+    /* Pause animation on hover */
+    .breaking-ticker:hover .ticker-content {
+        animation-play-state: paused;
+    }
+</style>
+
+<main class="news-page">
     <section id="berita" class="section">
         <div class="container">
-            <h2 class="section-title">Berita Terkini</h2>
-            <p class="section-subtitle">Ikuti perkembangan terbaru dari PT Guna Setia Prima</p>
-
-            <!-- Breaking News -->
-            <div class="breaking-news">
-                <div class="breaking-content">
-                    <span class="breaking-label">🔥 Breaking</span>
-                    <div class="breaking-text">
-                        PT GSP meraih penghargaan "Best Security Service Provider 2024" dari Asosiasi Keamanan Indonesia
-                    </div>
-                </div>
+            <div class="section-header">
+                <h1 class="section-title">Berita Terbaru</h1>
             </div>
 
-            <!-- Main News Grid -->
-            <div class="news-grid">
-                <!-- Featured News -->
-                <article class="featured-news" onclick="readMore('featured')">
-                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=400&fit=crop" alt="Kerja Sama Strategis">
-                    <div class="news-overlay">
-                        <span class="news-category">Partnership</span>
-                        <h3>Kerja Sama Strategis dengan PT Mitra Sejahtera</h3>
-                        <p>PT GSP menandatangani kontrak kerja sama strategis untuk penyediaan 500 tenaga kerja profesional di berbagai sektor, menandai ekspansi bisnis terbesar tahun ini.</p>
-                        <div class="news-meta">
-                            <div class="news-date">
-                                📅 28 Juni 2025
-                            </div>
-                            <div class="news-author">
-                                ✍️ Tim Redaksi GSP
+            <?php if (!empty($breakingNews)) : ?>
+                <div class="breaking-news-wrapper mb-4">
+                    <div class="breaking-ticker">
+                        <span class="breaking-label"><i class="fas fa-fire"></i> Breaking</span>
+                        <div class="ticker-wrapper">
+                            <div class="ticker-content">
+                                <?php foreach ($breakingNews as $breaking) : ?>
+                                    <?php if (!empty($breaking['link'])) : ?>
+                                        <a href="<?= esc($breaking['link']) ?>" target="_blank" rel="noopener">
+                                            <span><?= esc($breaking['judul']) ?></span>
+                                        </a>
+                                    <?php else : ?>
+                                        <span><?= esc($breaking['judul']) ?></span>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
-                </article>
-
-                <!-- Side News -->
-                <div class="side-news">
-                    <article class="news-item" onclick="readMore('training')">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&h=150&fit=crop" alt="Training Security">
-                        <div class="news-item-content">
-                            <span class="news-category">Training</span>
-                            <h4>Program Pelatihan Security Tingkat Lanjut</h4>
-                            <p>125 petugas security mengikuti pelatihan khusus penanganan situasi darurat dan teknologi keamanan modern.</p>
-                            <div class="news-date">📅 26 Juni 2025</div>
-                        </div>
-                    </article>
-
-                    <article class="news-item" onclick="readMore('expansion')">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&h=150&fit=crop" alt="Ekspansi Layanan">
-                        <div class="news-item-content">
-                            <span class="news-category">Expansion</span>
-                            <h4>Pembukaan Cabang Baru di Semarang</h4>
-                            <p>GSP resmi membuka kantor cabang ketiga di Semarang untuk melayani wilayah Jawa Tengah lebih optimal.</p>
-                            <div class="news-date">📅 24 Juni 2025</div>
-                        </div>
-                    </article>
-
-                    <article class="news-item" onclick="readMore('technology')">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&h=150&fit=crop" alt="Teknologi Baru">
-                        <div class="news-item-content">
-                            <span class="news-category">Technology</span>
-                            <h4>Implementasi Sistem Digital Monitoring</h4>
-                            <p>Peluncuran platform digital terintegrasi untuk monitoring real-time seluruh layanan GSP.</p>
-                            <div class="news-date">📅 22 Juni 2025</div>
-                        </div>
-                    </article>
                 </div>
+            <?php endif; ?>
+            
+            <div class="news-list" id="news-container">
+                <?php if (!empty($beritaList)) : ?>
+                    <?php foreach ($beritaList as $index => $berita) : ?>
+                        <div class="news-card">
+                            <?php if ($berita['gambar']) : ?>
+                                <div class="news-image-container">
+                                    <img src="<?= base_url('uploads/berita/' . $berita['gambar']) ?>" class="card-img-top" alt="<?= esc($berita['judul']) ?>">
+                                </div>
+                            <?php endif; ?>
+                            <div class="card-body">
+                                <div class="news-content">
+                                    <div class="news-meta">
+                                        <span><i class="fas fa-calendar-alt"></i> <?= date('d M Y', strtotime($berita['created_at'] ?? 'now')) ?></span>
+                                        <span><i class="fas fa-user"></i> Admin</span>
+                                        <span><i class="fas fa-eye"></i> <?= $berita['views'] ?? rand(100, 999) ?></span>
+                                    </div>
+                                    <h3 class="card-title"><?= esc($berita['judul']) ?></h3>
+                                    <p class="card-text"><?= esc(strip_tags($berita['excerpt'])) ?></p>
+                                </div>
+                                <a href="<?= base_url('berita/detail/' . $berita['slug']) ?>" class="btn-read-more">
+                                    Baca Selengkapnya
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <p class="text-center">Belum ada berita yang tersedia.</p>
+                <?php endif; ?>
             </div>
 
-            <!-- Regular News Grid -->
-            <div class="regular-news-grid">
-                <article class="news-card" onclick="readMore('award')">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=220&fit=crop" alt="Penghargaan">
-                    <div class="news-card-content">
-                        <span class="news-category">Achievement</span>
-                        <h3>Meraih ISO 45001:2018 Certification</h3>
-                        <p>PT GSP berhasil meraih sertifikasi ISO 45001:2018 untuk Sistem Manajemen Keselamatan dan Kesehatan Kerja, membuktikan komitmen terhadap standar internasional.</p>
-                        <div class="news-meta">
-                            <div class="news-date">📅 20 Juni 2025</div>
-                            <div class="news-author">✍️ Divisi QA/QC</div>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="news-card" onclick="readMore('csr')">
-                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=220&fit=crop" alt="Program CSR">
-                    <div class="news-card-content">
-                        <span class="news-category">CSR</span>
-                        <h3>Program Bantuan Pendidikan Anak Pekerja</h3>
-                        <p>GSP meluncurkan program beasiswa pendidikan untuk 50 anak karyawan berprestasi sebagai bentuk apresiasi dan investasi masa depan.</p>
-                        <div class="news-meta">
-                            <div class="news-date">📅 18 Juni 2025</div>
-                            <div class="news-author">✍️ Tim CSR GSP</div>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="news-card" onclick="readMore('innovation')">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=220&fit=crop" alt="Inovasi Layanan">
-                    <div class="news-card-content">
-                        <span class="news-category">Innovation</span>
-                        <h3>Layanan Cleaning Ramah Lingkungan</h3>
-                        <p>Introduksi produk pembersih organik dan metode cleaning eco-friendly untuk mendukung program go green perusahaan klien.</p>
-                        <div class="news-meta">
-                            <div class="news-date">📅 16 Juni 2025</div>
-                            <div class="news-author">✍️ Divisi R&D</div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Load More Button -->
-            <div class="load-more-container">
-                <button class="load-more-btn" onclick="loadMoreNews()">
-                    Muat Berita Lainnya
-                </button>
-            </div>
+            <?php if (!empty($hasMoreNews)) : ?>
+                <div class="load-more-container">
+                    <button class="load-more-btn" onclick="loadMoreNews()" id="loadMoreBtn">
+                        <i class="fas fa-plus-circle"></i>
+                        Muat Berita Lainnya
+                    </button>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
+</main>
 
-    <script>
-        function readMore(newsId) {
-            // Redirect ke halaman detail berita sesuai id
-            let detailMap = {
-                'award': 'berita_detail_award',
-                'csr': 'berita_detail_csr.php',
-                'innovation': 'berita_detail_innovation.php',
-                'featured': 'berita_detail_featured.php',
-                'training': 'berita_detail_training.php',
-                'expansion': 'berita_detail_expansion.php',
-                'technology': 'berita_detail_technology.php'
-            };
-            if (detailMap[newsId]) {
-                window.location.href = detailMap[newsId];
-            } else {
-                alert('Detail berita belum tersedia.');
-            }
-        }
+<script>
+    let currentOffset = <?= count($beritaList ?? []) ?>;
 
-        function loadMoreNews() {
-            // Simulasi load more functionality
-            const button = document.querySelector('.load-more-btn');
-            button.textContent = 'Memuat...';
-            button.disabled = true;
+    function loadMoreNews() {
+        const button = document.getElementById('loadMoreBtn');
+        const container = document.getElementById('news-container');
 
-            setTimeout(() => {
-                alert('Fitur load more akan menampilkan berita-berita lama dari database atau API.');
-                button.textContent = 'Muat Berita Lainnya';
+        if (!button || !container) return;
+
+        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memuat...';
+        button.disabled = true;
+
+        fetch('<?= base_url('berita/load-more') ?>', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: 'offset=' + currentOffset
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success && data.html) {
+                    container.insertAdjacentHTML('beforeend', data.html);
+                    currentOffset += data.count; 
+
+                    if (!data.hasMore) {
+                        button.style.display = 'none';
+                    }
+                } else {
+                    button.style.display = 'none';
+                }
+
+                button.innerHTML = '<i class="fas fa-plus-circle"></i> Muat Berita Lainnya';
                 button.disabled = false;
-            }, 1500);
-        }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                button.innerHTML = '<i class="fas fa-plus-circle"></i> Muat Berita Lainnya';
+                button.disabled = false;
+            });
+    }
+</script>
 
-        // Auto-update breaking news (simulasi)
-        const breakingTexts = [
-            "PT GSP meraih penghargaan 'Best Security Service Provider 2024' dari Asosiasi Keamanan Indonesia",
-            "Pembukaan lowongan kerja untuk 200 posisi security, cleaning, dan driver di seluruh Indonesia",
-            "Partnership baru dengan 15 perusahaan multinasional untuk layanan fasilitas management",
-            "Investasi teknologi AI untuk sistem monitoring keamanan senilai 2 miliar rupiah"
-        ];
-
-        let currentBreakingIndex = 0;
-        setInterval(() => {
-            const breakingText = document.querySelector('.breaking-text');
-            currentBreakingIndex = (currentBreakingIndex + 1) % breakingTexts.length;
-            breakingText.textContent = breakingTexts[currentBreakingIndex];
-        }, 10000); // Change every 10 seconds
-    </script>
-      <script src="Website/js/scripts.js"></script>
-</body>
-
-</html>
-<?php include 'Footer.php'; ?>
+<?= $this->endSection() ?>

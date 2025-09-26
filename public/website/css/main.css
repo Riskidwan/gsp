@@ -15,8 +15,10 @@ body {
 
 /* Header - Improved Responsive Design */
 .header {
-    background: white; /* sebelumnya: linear-gradient(...) */
-    color: black; /* sebelumnya: white */
+    background: white;
+    /* sebelumnya: linear-gradient(...) */
+    color: black;
+    /* sebelumnya: white */
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -55,7 +57,7 @@ body {
 .logo-text {
     font-size: 1rem;
     font-weight: bold;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .nav-menu {
@@ -70,7 +72,8 @@ body {
 }
 
 .nav-menu a {
-    color: black; /* sebelumnya: white */
+    color: black;
+    /* sebelumnya: white */
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -79,11 +82,7 @@ body {
     display: block;
 }
 
-.nav-menu a:hover {
-    color: #2a5298; /* agar tetap terlihat menarik */
-    background: rgba(42, 82, 152, 0.1);
-    transform: translateY(-2px);
-}
+
 
 /* Mobile Menu Toggle */
 
@@ -97,7 +96,7 @@ body {
 .mobile-toggle span {
     width: 25px;
     height: 3px;
-    background: white;
+    background: rgb(0, 0, 0);
     margin: 3px 0;
     border-radius: 2px;
     transition: 0.3s;
@@ -151,6 +150,7 @@ body {
     0% {
         transform: translateX(-100%);
     }
+
     100% {
         transform: translateX(100%);
     }
@@ -198,7 +198,8 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem; /* Reduced padding for better mobile experience */
+    padding: 0 1rem;
+    /* Reduced padding for better mobile experience */
 }
 
 .section-title {
@@ -233,7 +234,7 @@ body {
 
 /* === CONTACT SECTION - MAIN STYLES === */
 .contact {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background: linear-gradient(135deg, #02a85a 0%, #02a85a 100%);
     padding: 80px 0;
     position: relative;
     overflow: hidden;
@@ -320,7 +321,7 @@ body {
 
 .contact-label {
     font-weight: 600;
-    color: #4CAF50;
+    color: #1e3c72;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -436,11 +437,22 @@ body {
     font-weight: 500;
 }
 
+/* GANTI TOTAL ATURAN .services-grid YANG LAMA DENGAN INI */
+/* GANTI TOTAL ATURAN .services-grid DENGAN YANG INI */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    /* Untuk layar besar (Desktop): SELALU BUAT 3 KOLOM SAMA RATA */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
     margin-top: 2rem;
+}
+
+/* ATURAN TAMBAHAN UNTUK LAYAR KECIL (MOBILE) */
+@media (max-width: 768px) {
+    .services-grid {
+        /* Jika layar kecil: UBAH JADI 1 KOLOM SAJA AGAR RAPI */
+        grid-template-columns: 1fr;
+    }
 }
 
 .service-card {
@@ -568,6 +580,30 @@ body {
     padding: 2rem 0;
 }
 
+/* Supaya teks dan panah sejajar */
+.dropdown-parent>a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    /* jarak teks dan panah */
+    text-decoration: none;
+    cursor: pointer;
+    /* font-weight: bold; */
+    font-size: 18px;
+    /* BIAR TEBAL */
+    color: #000;
+    /* bisa diganti sesuai tema */
+}
+
+
+/* Style panah */
+.dropdown-parent .arrow {
+    font-size: 0.8em;
+    font-size: 16px;
+    font-weight: bold;
+    /* panah ikut tebal */
+}
+
 /* Dropdown Styles */
 .dropdown-parent {
     position: relative;
@@ -577,7 +613,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background: #1e3c72;
+    background: white;
     min-width: 220px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -588,7 +624,8 @@ body {
     z-index: 999;
 }
 
-.dropdown-parent:hover .dropdown-menu {
+/* Biarkan hover tetap untuk desktop */
+.dropdown-parent.active .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -602,18 +639,15 @@ body {
     border-bottom: none;
 }
 
-.dropdown-menu a {
-    display: block;
-    padding: 0.75rem 1.25rem;
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-}
+    /* .dropdown-menu a {
+        display: block;
+        padding: 0.75rem 1.25rem;
+        color: rgb(0, 0, 0);
+        font-weight: 500;
+        text-decoration: none;
+    } */
 
-.dropdown-menu a:hover {
-    background: rgba(255, 215, 0, 0.1);
-    color: #ffd700;
-}
+
 
 /* Animations */
 @keyframes fadeInUp {
@@ -621,6 +655,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -642,11 +677,11 @@ html {
     .container {
         padding: 0 1.5rem;
     }
-    
+
     .contact-wrapper {
         gap: 40px;
     }
-    
+
     .contact-info,
     .contact-form {
         padding: 30px;
@@ -655,6 +690,22 @@ html {
 
 /* Small Tablets and Large Phones (600px - 768px) */
 @media (max-width: 768px) {
+    .dropdown-parent.active .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        position: relative;
+        /* biar dropdown ikut di dalam nav */
+        background: #00695c;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .dropdown-menu a {
+        padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     /* Mobile Navigation */
     .mobile-toggle {
         display: flex;
@@ -665,7 +716,7 @@ html {
         top: 100%;
         left: 0;
         width: 100%;
-        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+         background: #004d40;
         flex-direction: column;
         gap: 0;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -713,7 +764,8 @@ html {
     }
 
     .contact-wrapper {
-        display: block !important; /* Force single column */
+        display: block !important;
+        /* Force single column */
         gap: 30px;
     }
 
@@ -842,5 +894,73 @@ html {
         width: 100%;
         overflow: hidden;
     }
+
+    
+}
+/* =============================================== */
+/* == GAYA BARU UNTUK KARTU LAYANAN (SERVICES) == */
+/* =============================================== */
+
+/* 1. Atur ulang .service-card agar padding dihilangkan dan menggunakan flexbox */
+.service-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Penting agar gambar mengikuti sudut rounded */
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* Hapus padding lama */
 }
 
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* 2. Styling untuk gambar agar seragam */
+.service-card .service-image {
+    width: 100%;
+    height: 200px; /* Atur tinggi yang sama untuk semua gambar */
+    object-fit: cover; /* Membuat gambar pas tanpa distorsi */
+    display: block;
+}
+
+/* 3. Styling untuk area konten (teks dan tombol) */
+.service-card .service-content {
+    padding: 1.5rem; /* Beri padding hanya di area ini */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Membuat semua card memiliki tinggi sama */
+    text-align: left; /* Atur teks agar rata kiri */
+}
+
+/* 4. Perbaikan margin untuk judul dan paragraf */
+.service-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.service-card p {
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Mendorong tombol ke bawah agar sejajar */
+}
+
+/* 5. Styling untuk tombol "Lihat Detail" */
+.detail-btn {
+    display: block;
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px; /* Membuat bentuk seperti pil */
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: auto; /* Memastikan tombol menempel di bawah */
+}
+
+.detail-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}

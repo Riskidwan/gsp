@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="id">
+<?= $this->extend('website\website') ?>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Security Services - PT Gemilang Sapta Perdana</title>
-  <link rel="stylesheet" href="Website/css/services.css" />
-</head>
+<?= $this->section('content') ?>
+
 
 <body>
-  <?php include 'header.php'; ?>
-<br>
+
+  <br>
   <!-- SLIDE 1: Hero Section -->
-  <section class="hero" style="background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
+  <section class="hero" style="background: linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:32px; padding:56px 24px;">
       <div style="flex:1 1 420px; min-width:280px; z-index:2;">
         <h1 style="font-size:2.8rem; margin-bottom:0.7rem;">Security Services</h1>
@@ -20,10 +15,10 @@
         <p style="font-size:1.13rem; color:#e3f2fd; margin-bottom:1.5rem; max-width:500px;">
           Kami menyediakan layanan keamanan 24/7 untuk area komersial dan residensial, dengan personel terlatih, sistem keamanan modern, dan manajemen risiko yang komprehensif.
         </p>
-        <a href="https://wa.me/6281234567890" target="_blank" style="background:#2196f3; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
+        <a href="https://wa.me/6282328085554" target="_blank" style="background:#2196f3; color:#fff; padding: 0.8rem 2.2rem; font-weight:600; font-size:1.1rem; border-radius:32px; text-decoration:none;">Hubungi Kami Sekarang</a>
       </div>
       <div style="flex:1 1 420px; min-width:280px; text-align:center;">
-        <img src="Website/images/satpam1.jpeg" alt="Security Services" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
+        <img src="website/security/satpam8.png" alt="Security Services" style="width:100%; max-width:440px; border-radius:18px; box-shadow:0 2px 16px rgba(0,0,0,0.13);" />
       </div>
     </div>
   </section>
@@ -44,7 +39,7 @@
         </ul>
       </div>
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="Website/images/satpam4.jpeg" alt="Security Overview" style="width:100%; max-width:340px; border-radius:14px;">
+        <img src="website/security/satpam2.jpg" alt="Security Overview" style="width:100%; max-width:340px; border-radius:14px;">
       </div>
     </div>
   </section>
@@ -53,7 +48,7 @@
   <section class="section">
     <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
       <div style="flex:1 1 340px; min-width:260px; text-align:center;">
-        <img src="Website/images/satpam3.jpeg" alt="Keunggulan Security" style="width:100%; max-width:340px; border-radius:14px;">
+        <img src="website/security/satpam10.jpg" alt="Keunggulan Security" style="width:100%; max-width:340px; border-radius:14px;">
       </div>
       <div style="flex:1 1 340px; min-width:260px;">
         <h2 style="color:#1565c0;">Mengapa Memilih GSP?</h2>
@@ -69,28 +64,46 @@
   </section>
 
   <!-- SLIDE 4: Jenis Layanan -->
-  <section class="section" style="background:#f8fbff;">
-    <div class="container">
-      <h2 style="color:#1565c0; text-align:center;">Jenis Layanan Security</h2>
-      <div style="display:flex; flex-wrap:wrap; gap:32px; justify-content:center; margin-top:2rem;">
-        <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="Website/images/satpam2.jpeg" alt="Security Guard" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
-          <h3 style="color:#1565c0;">Security Guard & Patrol</h3>
-          <p>Layanan security guard profesional dan patroli keamanan 24/7 untuk berbagai fasilitas.</p>
+  <section class="cleaning-section">
+    <div class="cleaning-container">
+      <h2 class="cleaning-title">Jenis Layanan Security</h2>
+      <div class="cleaning-grid">
+
+        <!-- Security Guard & Patrol -->
+        <div class="cleaning-card">
+          <div class="cleaning-image-container">
+            <img src="Website/security/satpam2.jpg"
+              alt="Security Guard & Patrol" class="cleaning-image">
+          </div>
+          <h3>Security Guard & Patrol</h3>
+          <p>Layanan security guard profesional dan patroli keamanan 24/7 untuk berbagai fasilitas, memastikan keamanan lingkungan terjaga setiap saat.</p>
         </div>
-        <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="Website/images/satpam3.jpeg" alt="CCTV Monitoring" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
-          <h3 style="color:#1565c0;">CCTV & Surveillance</h3>
-          <p>Sistem monitoring CCTV canggih dengan teknologi AI untuk pengawasan optimal.</p>
+
+        <!-- CCTV Monitoring -->
+        <div class="cleaning-card">
+          <div class="cleaning-image-container">
+            <img src="Website/security/satpam9.jpg"
+              alt="CCTV & Surveillance" class="cleaning-image">
+          </div>
+          <h3>CCTV & Surveillance</h3>
+          <p>Sistem monitoring CCTV canggih dengan teknologi AI untuk pengawasan optimal, pencegahan risiko, dan dokumentasi insiden secara real time.</p>
         </div>
-        <div style="flex:1 1 260px; background:#fff; border-radius:12px; padding:1.5rem 1rem; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.06);">
-          <img src="Website/images/satpam1.jpeg" alt="Access Control" style="width:100%; max-width:180px; border-radius:10px; margin-bottom:12px;">
-          <h3 style="color:#1565c0;">Bodyguard / Personal Security</h3>
-          <p>Layanan keamanan pribadi oleh petugas profesional yang bertugas melindungi individu, terutama tokoh publik, eksekutif, atau tamu penting. Bertindak cepat dalam situasi darurat dan menjaga keamanan pribadi klien di berbagai situasi.</p>
+
+        <!-- Bodyguard / Personal Security -->
+        <div class="cleaning-card">
+          <div class="cleaning-image-container">
+            <img src="Website/security/satpam3.jpg"
+              alt="Bodyguard / Personal Security" class="cleaning-image">
+          </div>
+          <h3>Bodyguard / Personal Security</h3>
+          <p>Layanan keamanan pribadi oleh petugas profesional untuk melindungi tokoh publik, eksekutif, atau tamu penting, dengan kesiapan menghadapi situasi darurat.</p>
         </div>
+
       </div>
     </div>
   </section>
+
+
 
   <!-- SLIDE 5: Hasil Proyek yang Sudah Dikerjakan -->
   <section id="projects" class="section">
@@ -99,51 +112,54 @@
       <p class="section-subtitle">Berikut adalah dokumentasi dari beberapa hasil proyek Security Services yang telah kami kerjakan bersama mitra kami.</p>
       <div class="services-grid">
 
+        <!-- Proyek 1 -->
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=180&fit=crop"
-            alt="Keamanan Kantor PT Nusantara Abadi" class="service-image">
-          <h3>Keamanan Kantor PT Nusantara Abadi</h3>
-          <p>Penyediaan layanan security guard 24/7 dan sistem CCTV monitoring untuk gedung kantor pusat di Jakarta.</p>
+          <div class="service-image-container">
+            <img src="Website/security/satpam2.jpg"
+              alt="Keamanan PT Inkom" class="service-image">
+          </div>
+          <div class="service-content">
+            <div>
+              <h3>Keamanan PT Inkom</h3>
+              <p>Penerapan sistem keamanan industri yang mencakup penjagaan ketat area produksi, pengawasan keluar-masuk barang dan kendaraan, serta dukungan CCTV untuk seluruh area pabrik. Tim security bertugas memastikan keselamatan pekerja, perlindungan aset, dan kelancaran aktivitas operasional.</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- Proyek 2 -->
+        <div class="service-card">
+          <div class="service-image-container">
+            <img src="Website/security/satpam4.jpeg"
+              alt="Keamanan DPRD Pemalang" class="service-image">
+          </div>
+          <div class="service-content">
+            <div>
+              <h3>Keamanan Gedung DPRD Pemalang</h3>
+              <p>Penyediaan tenaga pengamanan profesional dengan standar tinggi untuk mendukung keamanan gedung DPRD Pemalang. Fokus layanan mencakup pengaturan akses keluar-masuk tamu, pengawasan area publik, serta kesiapan tim dalam penanganan situasi darurat.</p>
+            </div>
+
+          </div>
         </div>
 
+        <!-- Proyek 3 -->
         <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e?w=400&h=180&fit=crop"
-            alt="Security Mall Central Park" class="service-image">
-          <h3>Security Mall Central Park</h3>
-          <p>Manajemen keamanan terpadu untuk pusat perbelanjaan dengan sistem access control dan emergency response.</p>
-        </div>
+          <div class="service-image-container">
+            <img src="Website/security/foto.jpg"
+              alt="Keamanan PT Casuarida Herusida" class="service-image">
+          </div>
+          <div class="service-content">
+            <div>
+              <h3>Keamanan PT Cassuarina Harnessindo</h3>
+              <p>Implementasi sistem keamanan industri untuk mendukung lingkungan kerja yang aman dan produktif. Layanan mencakup penjagaan akses area produksi, monitoring aset vital perusahaan, serta penerapan protokol keselamatan sesuai standar K3.</p>
+            </div>
 
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=180&fit=crop"
-            alt="Keamanan Hotel Grand Sari" class="service-image">
-          <h3>Keamanan Hotel Grand Sari</h3>
-          <p>Layanan keamanan hotel bintang 5 dengan fokus pada keamanan tamu dan fasilitas premium.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=180&fit=crop"
-            alt="Security Perumahan Elite Residence" class="service-image">
-          <h3>Security Perumahan Elite Residence</h3>
-          <p>Sistem keamanan perumahan eksklusif dengan gerbang akses otomatis dan patroli keamanan 24 jam.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=180&fit=crop"
-            alt="CCTV Monitoring Gedung Sentral" class="service-image">
-          <h3>CCTV Monitoring Gedung Sentral</h3>
-          <p>Instalasi sistem CCTV 360° dengan teknologi AI untuk gedung perkantoran multi-tenant.</p>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=180&fit=crop"
-            alt="Security Pabrik Manufaktur" class="service-image">
-          <h3>Security Pabrik Manufaktur</h3>
-          <p>Layanan keamanan industri dengan protokol keselamatan tinggi dan pengawasan area produksi.</p>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
+
 
   <!-- SLIDE 6: Klien yang Pernah Dilayani -->
   <section class="section" style="background:#f8fbff;">
@@ -153,29 +169,54 @@
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center;">
         <div style="text-align:center;">
-          <img src="Website/images/mandiri.jpeg" alt="Bank Mandiri" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Bank Mandiri</p>
+          <img src="Website/images/pt casuarina.jpeg" alt="Bank Mandiri" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Cassuarina Harnessindo</p>
         </div>
         <div style="text-align:center;">
-          <img src="Website/images/shangri.jpeg" alt="Shangri-La Hotels" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Shangri-La Hotels</p>
+          <img src="Website/images/PT Inkom.png" alt="Bank Mandiri" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Industri Komkar Indonesia</p>
         </div>
         <div style="text-align:center;">
-          <img src="Website/images/grand_indonesia.jpeg" alt="Grand Indonesia" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Grand Indonesia</p>
+          <img src="Website/images/khas_tegal.png" alt="Bank Mandiri" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">KHAS Tegal Hotel</p>
         </div>
         <div style="text-align:center;">
-          <img src="Website/images/siloam.jpeg" alt="RS Siloam" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">RS Siloam</p>
+          <img src="Website/images/Joglo_Ageng.jpeg" alt="Bank Mandiri" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Joglo Ageng Hotel & Resort</p>
         </div>
         <div style="text-align:center;">
-          <img src="Website/images/bca.jpeg" alt="Menara BCA" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Menara BCA</p>
+          <img src="Website/images/Bufftim_Cell.png" alt="Bank Mandiri" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Bufftim Cell</p>
         </div>
         <div style="text-align:center;">
-          <img src="Website/images/astra.jpeg" alt="Astra International" style="max-width:100px;">
-          <p style="margin-top:10px; font-size:0.95rem; color:#333;">Astra International</p>
+          <img src="Website/images/BPS_Pemalang.jpeg" alt="Bank Mandiri" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">BPS Pemalang</p>
         </div>
+        <div style="text-align:center;">
+          <img src="Website/images/DPRD.png" alt="Shangri-La Hotels" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">DPRD Pemalang</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/PT_Shinsung.jpeg" alt="Shangri-La Hotels" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Grand Shinsung Indonesia</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/kemnaker.svg" alt="Shangri-La Hotels" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">kemnaker</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/PT_Indonesia_Xin.png" alt="Shangri-La Hotels" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Indonesia Xin Hai Steel Structure</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/PT_Yoga_Cipta_Perkasa.jpeg" alt="Grand Indonesia" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Yoga Cipta Perkasa</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="Website/images/PT-Aida-Rottan-Industry.webp" alt="PT-Aida-Rottan-Industry" style="max-width:100px;">
+          <p style="margin-top:10px; font-size:0.95rem; color:#333;">PT Aida Rottan</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -279,25 +320,25 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="section" style="background:#1565c0; color:#fff; text-align:center; padding:80px 0;">
+  <section class="section" style="background:linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color:#fff; text-align:center; padding:80px 0;">
     <div class="container">
       <h2 style="font-size:2.5rem; margin-bottom:1rem; color:#fff;">Butuh Layanan Keamanan Terpercaya?</h2>
       <p style="font-size:1.2rem; margin-bottom:2rem; color:#bbdefb;">Hubungi kami sekarang untuk konsultasi gratis dan dapatkan solusi keamanan terbaik!</p>
       <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
-        <a href="https://wa.me/6281234567890" target="_blank" style="background:#2196f3; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="https://wa.me/6282328085554" target="_blank" style="background:#2196f3; color:#fff; padding:14px 32px; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           📱 WhatsApp Konsultasi
         </a>
-        <a href="tel:+6281234567890" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #2196f3; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
+        <a href="tel:+6282328085554" style="background:transparent; color:#fff; padding:14px 32px; border:2px solid #2196f3; border-radius:32px; text-decoration:none; font-weight:600; font-size:1.1rem;">
           📞 Call Now
         </a>
       </div>
     </div>
   </section>
+  <?= $this->endSection() ?>
 
-  <?php include 'Footer.php'; ?>
 
   <script>
-     document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
       const form = document.querySelector("form");
       const btn = form.querySelector("button[type='submit']");
       const btnText = btn.textContent;
@@ -333,7 +374,7 @@
       });
     });
   </script>
-      <script src="Website/js/scripts.js"></script>
+  <script src="Website/js/scripts.js"></script>
 </body>
 
 </html>
