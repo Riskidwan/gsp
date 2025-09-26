@@ -10,7 +10,7 @@
 
 <body>
 
-<<<<<<< HEAD
+
   <!-- SLIDE 1: Hero Section -->
   <section class="hero" style="background: linear-gradient(135deg, #02a85a 0%, #02a85a 100%); color: #fff; min-height: 100vh; display: flex; align-items: center; padding: 0;">
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:32px; padding:56px 24px;">
@@ -90,13 +90,12 @@
         </div>
     </section>
 
-<<<<<<< HEAD
-        <div class="service-card">
+  <div class="service-card">
           <img src="https://images.unsplash.com/photo-1616348436168-0b47c2ed1e20?w=400&h=180&fit=crop"
                alt="Proses Produksi" class="service-image">
           <h3>Proses Produksi</h3>
           <p>Pengoperasian mesin untuk memproduksi komponen karet sesuai desain.</p>
-=======
+
     <section class="section">
         <div class="container" style="display:flex; flex-wrap:wrap; gap:32px; align-items:center;">
             <div style="flex:1 1 340px; min-width:260px; text-align:center;">
@@ -312,7 +311,7 @@
                 btn.style.opacity = "0.6";
                 btn.textContent = "Mengirim...";
 
-<<<<<<< HEAD
+
         <div class="form-group" style="margin-bottom:20px;">
           <label for="layanan" style="display:block; font-weight:500; margin-bottom:8px;">Jenis Layanan</label>
           <select id="layanan" name="layanan"
@@ -458,30 +457,7 @@
       });
     });
   </script>
-=======
-                fetch(form.action, {
-                        method: "POST",
-                        body: new FormData(form),
-                    })
-                    .then((res) => res.text())
-                    .then((data) => {
-                        alert("✅ Masukan berhasil dikirim!");
-                        form.reset();
-                        btn.disabled = false;
-                        btn.style.opacity = "1";
-                        btn.textContent = btnText;
-                    })
-                    .catch((err) => {
-                        alert("❌ Gagal mengirim. Coba lagi.");
-                        console.error(err);
-                        btn.disabled = false;
-                        btn.style.opacity = "1";
-                        btn.textContent = btnText;
-                    });
-            });
-        });
-    </script>
->>>>>>> 50f41c29f91ecf55192946faeb9bb743062d208d
+
     <script src="Website/js/scripts.js"></script>
 
     <?= $this->endSection() ?>
